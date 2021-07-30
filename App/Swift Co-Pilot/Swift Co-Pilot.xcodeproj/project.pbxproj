@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55C8C98126B3C512007686A3 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C8C98026B3C512007686A3 /* Keys.swift */; };
+		55C8C98326B3C5A0007686A3 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C8C98226B3C5A0007686A3 /* resultViewController.swift */; };
+		55C8C98526B3C5BB007686A3 /* UIImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C8C98426B3C5BB007686A3 /* UIImageModel.swift */; };
+		55C8C98726B3C635007686A3 /* buttonShapeDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55C8C98626B3C635007686A3 /* buttonShapeDetector.mlmodel */; };
 		91DB992626B2BE3900F8C5D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB992526B2BE3900F8C5D8 /* AppDelegate.swift */; };
 		91DB992826B2BE3900F8C5D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB992726B2BE3900F8C5D8 /* SceneDelegate.swift */; };
 		91DB992A26B2BE3900F8C5D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB992926B2BE3900F8C5D8 /* ViewController.swift */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55C8C98026B3C512007686A3 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		55C8C98226B3C5A0007686A3 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = resultViewController.swift; path = "Swift Co-Pilot/View/resultViewController.swift"; sourceTree = SOURCE_ROOT; };
+		55C8C98426B3C5BB007686A3 /* UIImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageModel.swift; sourceTree = "<group>"; };
+		55C8C98626B3C635007686A3 /* buttonShapeDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = buttonShapeDetector.mlmodel; sourceTree = "<group>"; };
 		91DB992226B2BE3900F8C5D8 /* Swift Co-Pilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Co-Pilot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DB992526B2BE3900F8C5D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DB992726B2BE3900F8C5D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55C8C97A26B3C48D007686A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55C8C98226B3C5A0007686A3 /* resultViewController.swift */,
+				91DB992926B2BE3900F8C5D8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55C8C97B26B3C493007686A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91DB992B26B2BE3900F8C5D8 /* Main.storyboard */,
+				91DB992E26B2BE4000F8C5D8 /* Assets.xcassets */,
+				91DB993026B2BE4000F8C5D8 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55C8C97C26B3C499007686A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55C8C98426B3C5BB007686A3 /* UIImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55C8C97D26B3C49E007686A3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				55C8C98026B3C512007686A3 /* Keys.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		55C8C97E26B3C4A5007686A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91DB992526B2BE3900F8C5D8 /* AppDelegate.swift */,
+				91DB992726B2BE3900F8C5D8 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55C8C97F26B3C4AE007686A3 /* ML Models */ = {
+			isa = PBXGroup;
+			children = (
+				55C8C98626B3C635007686A3 /* buttonShapeDetector.mlmodel */,
+			);
+			path = "ML Models";
+			sourceTree = "<group>";
+		};
 		91DB991926B2BE3900F8C5D8 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +159,12 @@
 		91DB992426B2BE3900F8C5D8 /* Swift Co-Pilot */ = {
 			isa = PBXGroup;
 			children = (
-				91DB992526B2BE3900F8C5D8 /* AppDelegate.swift */,
-				91DB992726B2BE3900F8C5D8 /* SceneDelegate.swift */,
-				91DB992926B2BE3900F8C5D8 /* ViewController.swift */,
-				91DB992B26B2BE3900F8C5D8 /* Main.storyboard */,
-				91DB992E26B2BE4000F8C5D8 /* Assets.xcassets */,
-				91DB993026B2BE4000F8C5D8 /* LaunchScreen.storyboard */,
+				55C8C97F26B3C4AE007686A3 /* ML Models */,
+				55C8C97E26B3C4A5007686A3 /* Supporting Files */,
+				55C8C97D26B3C49E007686A3 /* Utilities */,
+				55C8C97C26B3C499007686A3 /* Model */,
+				55C8C97B26B3C493007686A3 /* View */,
+				55C8C97A26B3C48D007686A3 /* Controller */,
 				91DB993326B2BE4000F8C5D8 /* Info.plist */,
 			);
 			path = "Swift Co-Pilot";
@@ -258,8 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C8C98326B3C5A0007686A3 /* resultViewController.swift in Sources */,
+				55C8C98526B3C5BB007686A3 /* UIImageModel.swift in Sources */,
 				91DB992A26B2BE3900F8C5D8 /* ViewController.swift in Sources */,
+				55C8C98126B3C512007686A3 /* Keys.swift in Sources */,
 				91DB992626B2BE3900F8C5D8 /* AppDelegate.swift in Sources */,
+				55C8C98726B3C635007686A3 /* buttonShapeDetector.mlmodel in Sources */,
 				91DB992826B2BE3900F8C5D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
