@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     private var request = VNRecognizeTextRequest(completionHandler: nil)
     private let buttonDetector = buttonShapeDetector()
     private var selectedImage = UIImageView()
-    static var resultSnippet = String()
+    static var resultSnippet = [String()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,13 +70,15 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     private func setupVisionTextRecognition(image: UIImage?){
         //indicator.startAnimating()
         var textString = ""
-        
+        //Handler
+        //Request
+        //Process Request
         request = VNRecognizeTextRequest(completionHandler: { (request, error) in
-            guard let observations = request.results as? [VNRecognizedTextObservation]else{fatalError("Recived invalid observation")}
+            guard let observations = request.results as? [VNRecognizedTextObservation] else{fatalError("Recived invalid observation")}
             
             for observation in observations{
                 guard let topCandidate = observation.topCandidates(1).first else {
-                    print("No Candidate")
+                    print("No Candidate") 
                     continue
                 }
                 textString += "\n\(topCandidate.string)"
@@ -138,6 +140,11 @@ extension ViewController {
             return
         case "label":
             print("label detected")
+            codeSnippet(snippetNo: 2)
+            return
+        case "textfield":
+            print("textfield detected")
+            codeSnippet(snippetNo: 3)
             return
         default:
             print("error")
@@ -184,14 +191,54 @@ extension ViewController {
         switch snippetNo {
         case 1:
             ViewController.resultSnippet =
-                """
+               [ """
             let button = UIButton()
             button.frame = CGRect(x: view.center.x, y: view.center.y, width: 100, height: 100)
             button.setTitle("", for: .normal)
             button.layer.cornerRadius = 0
             button.layer.borderWidth = 0
             button.layer.borderColor = UIColor.clear.cgColor
-"""
+""",
+                 """
+                              Button(action:{
+                                  //do something when button is tapped
+                              }){
+                                  Text("Title")
+                              }.padding()
+                              .foregroundColor(.blue)
+                              .background(Rectangle().fill(Color.white))
+                             //adjust width, height or alignment
+                              .frame(width: 100, height: 100)
+  """]
+        case 2:
+            ViewController.resultSnippet =
+               [ """
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+            label.center = CGPoint(x: 160, y: 285)
+            label.textAlignment = .center
+            label.text = "I'm a test label"
+            self.view.addSubview(label)
+""",
+                 """
+              Label("SwiftUI Label", systemImage: "book.fill")
+                .labelStyle(TitleOnlyLabelStyle())
+  """]
+        case 3:
+            ViewController.resultSnippet =
+               [ """
+            UITextField
+""",
+                 """
+              struct ContentView: View {
+                  @State var username: String = ""
+                  
+                  var body: some View {
+                      VStack(alignment: .leading) {
+                          TextField("Enter username...", text: $username)
+                      }.padding()
+                  }
+              }
+  """]
         default:
             break
         }
