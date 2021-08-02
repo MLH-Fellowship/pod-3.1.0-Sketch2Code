@@ -1,4 +1,9 @@
-# Explorer Template
+# Sketch2Code
+ **Features**
+- Detects images of UIElements and presents the code snippet for respective elements in both UIKit & SwiftUI.
+- Supported UIElements in this version include Button, Label & Textfield. 
+- An Image classifier model to differentiate b/w various shapes of UIElement like a button.  
+## Explorer Template
 
 This is a template to help you get started with your projects. Find out more information inside of the Fello Handbook.
 
