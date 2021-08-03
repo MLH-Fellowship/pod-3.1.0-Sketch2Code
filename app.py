@@ -27,6 +27,7 @@ def history():
         userHistory[ip].append([title, code])
         while len(userHistory[ip]) > LIMIT:
             userHistory[ip].pop(0)
+        return jsonify(success=True), 200
 if __name__ == '__main__':
     userHistory = defaultdict(list)
     app.run(debug=True) #debug=True so that caching doesn't occur
