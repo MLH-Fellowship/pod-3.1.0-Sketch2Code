@@ -12,4 +12,9 @@ class keys {
     
     //MARK:- Segues
     let scanToResultVC = "scanToResultVC"
+    
+    //MARK:- Shape names
+    let square = "squares"
+    let circle = "circles"
+    let triangle = "triangles"
 }
