@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_Co_Pilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBI-S6-EXt">
+                                <rect key="frame" x="62" y="418" width="290" height="60"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bnL-Xx-lSh"/>
+                                    <constraint firstAttribute="width" constant="290" id="cIJ-Ya-lIl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Sketch Down">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L0Z-Q4-Mkc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sketch 2 Code 🚀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cW-CZ-Uc6">
+                                <rect key="frame" x="20" y="44" width="374" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="IaN-qK-xnb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7cW-CZ-Uc6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dCV-LU-Noz"/>
+                            <constraint firstItem="GBI-S6-EXt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eFt-z8-WIV"/>
+                            <constraint firstItem="GBI-S6-EXt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n0h-8d-Mq3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7cW-CZ-Uc6" secondAttribute="trailing" constant="20" id="qVV-DP-LGN"/>
+                            <constraint firstItem="7cW-CZ-Uc6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y0c-MU-4dj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scanBtn" destination="GBI-S6-EXt" id="XPV-G3-fiu"/>
+                        <segue destination="ULY-b6-rfT" kind="show" identifier="scanToResultVC" id="rPg-vt-9FB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="115"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="NQo-lt-UOx">
+            <objects>
+                <viewController id="ULY-b6-rfT" customClass="resultViewController" customModule="Swift_Co_Pilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DCr-Qe-IGP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Result" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="saq-Lz-s1w">
+                                <rect key="frame" x="20" y="94" width="374" height="674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sketch 2 Code 🚀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThW-9r-hb3">
+                                <rect key="frame" x="20" y="20" width="374" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="wtA-Uf-l87"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FwS-1I-cJ8">
+                                <rect key="frame" x="250" y="32" width="129" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="yB0-QS-rkY"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="UIKit"/>
+                                    <segment title="SwiftUI"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="ULY-b6-rfT" eventType="valueChanged" id="jSS-bb-OAu"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hn9-30-gNi">
+                                <rect key="frame" x="176" y="785" width="62" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="5y8-pI-U4R"/>
+                                </constraints>
+                                <state key="normal" image="doc.badge.plus" catalog="system">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyBtn:" destination="ULY-b6-rfT" eventType="touchUpInside" id="7NJ-IQ-lBn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S0g-MZ-wyZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="saq-Lz-s1w" firstAttribute="top" secondItem="ThW-9r-hb3" secondAttribute="bottom" constant="20" id="IPE-AF-xzr"/>
+                            <constraint firstItem="FwS-1I-cJ8" firstAttribute="top" secondItem="S0g-MZ-wyZ" secondAttribute="top" constant="32" id="LyU-gr-d1g"/>
+                            <constraint firstItem="S0g-MZ-wyZ" firstAttribute="trailing" secondItem="hn9-30-gNi" secondAttribute="trailing" constant="176" id="O7t-3J-uhw"/>
+                            <constraint firstItem="S0g-MZ-wyZ" firstAttribute="trailing" secondItem="saq-Lz-s1w" secondAttribute="trailing" constant="20" id="R5j-xF-YYu"/>
+                            <constraint firstItem="S0g-MZ-wyZ" firstAttribute="trailing" secondItem="ThW-9r-hb3" secondAttribute="trailing" constant="20" id="Upa-0a-RxN"/>
+                            <constraint firstItem="S0g-MZ-wyZ" firstAttribute="bottom" secondItem="saq-Lz-s1w" secondAttribute="bottom" constant="40" id="YLe-yd-051"/>
+                            <constraint firstItem="FwS-1I-cJ8" firstAttribute="leading" secondItem="S0g-MZ-wyZ" secondAttribute="leading" constant="250" id="etb-AR-qg4"/>
+                            <constraint firstItem="saq-Lz-s1w" firstAttribute="leading" secondItem="S0g-MZ-wyZ" secondAttribute="leading" constant="20" id="nN7-uq-S4I"/>
+                            <constraint firstItem="hn9-30-gNi" firstAttribute="leading" secondItem="S0g-MZ-wyZ" secondAttribute="leading" constant="176" id="rB3-9d-hTV"/>
+                            <constraint firstItem="ThW-9r-hb3" firstAttribute="top" secondItem="S0g-MZ-wyZ" secondAttribute="top" constant="20" id="rVo-A2-tGL"/>
+                            <constraint firstItem="ThW-9r-hb3" firstAttribute="leading" secondItem="S0g-MZ-wyZ" secondAttribute="leading" constant="20" id="tGU-Dt-cKG"/>
+                            <constraint firstItem="hn9-30-gNi" firstAttribute="bottom" secondItem="S0g-MZ-wyZ" secondAttribute="bottom" id="xXU-5Z-ZD9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fg3-Yl-dNN"/>
+                    <connections>
+                        <outlet property="resultView" destination="saq-Lz-s1w" id="MOW-Fi-exH"/>
+                        <outlet property="segmentedControl" destination="FwS-1I-cJ8" id="Jy7-qz-GuU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FZC-Cs-thf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.badge.plus" catalog="system" width="119" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
