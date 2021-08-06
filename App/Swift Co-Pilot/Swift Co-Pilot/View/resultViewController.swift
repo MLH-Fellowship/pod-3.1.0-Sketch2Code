@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Alamofire
 
 class resultViewController: UIViewController {
+    var count = 7
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var resultView: UITextView!
@@ -30,6 +32,20 @@ class resultViewController: UIViewController {
     
     @IBAction func copyBtn(_ sender: UIButton) {
         UIPasteboard.general.string = resultView.text
+        post()
     }
     
+}
+
+extension resultViewController{
+        func post(){
+            
+        let parameters = ["title": "UIB-\(count)", "code": ViewController.resultSnippet[0]]
+        let header:HTTPHeaders = ["Content-Type":"application/json"]
+        AF.request("http://sketch2code.tech/history", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: header).responseJSON{(response) in
+            print(response)
+            self.count += 1
+        }
+    }
+
 }

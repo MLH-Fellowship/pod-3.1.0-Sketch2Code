@@ -9,6 +9,7 @@ import UIKit
 import Vision
 import VisionKit
 import CoreML
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -26,6 +27,10 @@ class ViewController: UIViewController {
         scanBtn.layer.cornerRadius = 14
     }
     
+    @IBAction func testBtn(_ sender: UIButton) {
+        alamoGet()
+//        newGet()
+    }
     @IBAction func scanButton(_ sender: Any) {
         showDataInputType()
     }
@@ -322,4 +327,18 @@ SwiftUI code for UISegment Control
         
         self.performSegue(withIdentifier: keys.valueOf.scanToResultVC, sender: nil)
     }
+    //MARK:-GET
+    func alamoGet(){
+        let request = AF.request("http://sketch2code.tech/history")
+            // 2
+        request.responseJSON { (data) in
+            print(data)
+            }
+        //use this when ip address is added to API 
+//        request.responseDecodable(of: Result.self) { (response) in
+//          guard let results = response.value else { return }
+//          print(results.code)
+//        }
+    }
+
 }

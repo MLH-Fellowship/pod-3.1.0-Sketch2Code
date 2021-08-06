@@ -41,13 +41,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWq-Ck-NLp">
+                                <rect key="frame" x="100" y="784" width="214" height="30"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQH-AE-P8Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWq-Ck-NLp" secondAttribute="trailing" constant="100" id="DGW-gX-6c3"/>
+                            <constraint firstItem="rWq-Ck-NLp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="cGk-H3-cEn"/>
                             <constraint firstItem="7cW-CZ-Uc6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dCV-LU-Noz"/>
                             <constraint firstItem="GBI-S6-EXt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eFt-z8-WIV"/>
                             <constraint firstItem="GBI-S6-EXt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n0h-8d-Mq3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rWq-Ck-NLp" secondAttribute="bottom" constant="48" id="ouJ-fC-S6a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7cW-CZ-Uc6" secondAttribute="trailing" constant="20" id="qVV-DP-LGN"/>
                             <constraint firstItem="7cW-CZ-Uc6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y0c-MU-4dj"/>
                         </constraints>
