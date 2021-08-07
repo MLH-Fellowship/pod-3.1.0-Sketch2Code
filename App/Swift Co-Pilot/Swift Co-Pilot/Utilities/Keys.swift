@@ -12,9 +12,15 @@ class keys {
     
     //MARK:- Segues
     let scanToResultVC = "scanToResultVC"
+    let mainToTextCodeVC = "mainToTextCode"
+    let textToResultVC = "textToResult"
+    let abbreviationVC = "abbreviationVC"
     
     //MARK:- Shape names
     let square = "squares"
     let circle = "circles"
     let triangle = "triangles"
+    
+    //MARK:- cell ID
+    let rulesCellID = "rulesCellID"
 }
