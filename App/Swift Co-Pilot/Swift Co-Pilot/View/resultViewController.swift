@@ -15,7 +15,7 @@ class resultViewController: UIViewController {
     @IBOutlet weak var resultView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        resultView.layer.cornerRadius = 25
         resultView.text = ViewController.resultSnippet[0]
     }
     
@@ -32,7 +32,11 @@ class resultViewController: UIViewController {
     
     @IBAction func copyBtn(_ sender: UIButton) {
         UIPasteboard.general.string = resultView.text
-        post()
+        Loaf.GradientLoaf(message: "Snippet Saved", position: .bottom, loafWidth: 300, loafHeight: 45, cornerRadius: 14, fontStyle: "Avenir Medium", fontSize: 18, bgColor1: .systemOrange, bgColor2: .systemPink, fontColor: .black, loafImage: nil, animationDirection: .Bottom, duration: 3.0, loafjetView: view)
+        self.post()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
+            self.dismiss(animated: true, completion: nil)
+        })
     }
     
 }

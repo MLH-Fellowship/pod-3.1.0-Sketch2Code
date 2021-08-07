@@ -14,6 +14,7 @@ import Alamofire
 class ViewController: UIViewController {
     
     @IBOutlet weak var scanBtn: UIButton!
+    @IBOutlet weak var coPilotBtn: UIButton!
     
     private var request = VNRecognizeTextRequest(completionHandler: nil)
     private let buttonDetector = buttonShapeDetector()
@@ -23,17 +24,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         scanBtn.layer.cornerRadius = 14
+        coPilotBtn.layer.cornerRadius = 14
     }
     
     @IBAction func testBtn(_ sender: UIButton) {
         alamoGet()
-//        newGet()
     }
     @IBAction func scanButton(_ sender: Any) {
         showDataInputType()
     }
+    
+    @IBAction func coPilotButton(_ sender: Any) {
+        self.performSegue(withIdentifier: keys.valueOf.mainToTextCodeVC, sender: nil)
+    }
+    
     
     func showDataInputType() {
         let alert = UIAlertController(title: "Input mode", message: "Select a input mode", preferredStyle: .actionSheet)
