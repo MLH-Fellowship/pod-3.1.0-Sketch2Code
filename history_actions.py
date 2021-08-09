@@ -2,9 +2,6 @@ from methods import addHist, getHist
 from cockroachdb.sqlalchemy import run_transaction
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.dialects import registry
-registry.register("cockroachdb", "cockroachdb.sqlalchemy.dialect",
-                  "CockroachDBDialect")
 class HistoryActions:
     def __init__(self, conn_string):
         self.engine = create_engine(conn_string, convert_unicode=True)

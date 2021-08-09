@@ -2,7 +2,9 @@ from flask import Flask, request, send_file, session, render_template, jsonify, 
 import os
 import json
 from collections import defaultdict
-import subprocess
+from sqlalchemy.dialects import registry
+registry.register("cockroachdb", "cockroachdb.sqlalchemy.dialect",
+                  "CockroachDBDialect")
 from history_actions import HistoryActions
 
 app = Flask(__name__)
@@ -34,5 +36,4 @@ def history():
         return jsonify(success=True), 200
 if __name__ == '__main__':
     userHistory = defaultdict(list)
-    subprocess.call('./setup.sh')
     app.run(debug=True) #debug=True so that caching doesn't occur
