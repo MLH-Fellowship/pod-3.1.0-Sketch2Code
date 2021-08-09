@@ -24,7 +24,7 @@ def history():
     ip = request.remote_addr
     if request.method == 'GET':
         res = userHistory[ip] if ip in userHistory else []
-        return jsonify({ip: res, 'ip_address': ip}), 200
+        return jsonify({'ip_address': res}), 200
     elif request.method == 'POST':
         title = request.get_json().get('title', '')
         code = request.get_json().get('code', '')
