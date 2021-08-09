@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = "asdfasfdasfdsafasddfsadfasdfsadfdas"
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 LIMIT = 10
-database = None
+database = HistoryActions(os.environ['DATABASE_URL'])
 
 userHistory = defaultdict(list)
 
@@ -34,4 +34,3 @@ def history():
 if __name__ == '__main__':
     userHistory = defaultdict(list)
     app.run(debug=True) #debug=True so that caching doesn't occur
-    database = HistoryActions(os.environ['DATABASE_URL'])
