@@ -23,16 +23,15 @@ def index():
 def history():
     ip = request.remote_addr
     if request.method == 'GET':
-        res = database.getHistory(ip)
-        return jsonify({ip: res}), 200
+        res = userHistory[ip] if ip in userHistory else []
+        return jsonify({ip: res, 'ip_address': ip}), 200
     elif request.method == 'POST':
         title = request.get_json().get('title', '')
         code = request.get_json().get('code', '')
 
-        #userHistory[ip].append([title, code])
-        database.addHistory(ip, title, code)
-        #while len(userHistory[ip]) > LIMIT:
-        #    userHistory[ip].pop(0)
+        userHistory[ip].append([title, code])
+        while len(userHistory[ip]) > LIMIT:
+            userHistory[ip].pop(0)
         return jsonify(success=True), 200
 if __name__ == '__main__':
     userHistory = defaultdict(list)
