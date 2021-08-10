@@ -30,6 +30,11 @@ def history():
     if request.method == 'GET':
         try:
             res = db.reference('/ip').get()
+            temp = []
+
+            for v in res:
+                temp.append(res[v])
+            res = temp
         except:
             res = []
         return jsonify({'ip_address': res}), 200
