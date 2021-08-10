@@ -28,7 +28,10 @@ def history():
     ip = request.environ['REMOTE_ADDR']
     print("ip====",ip)
     if request.method == 'GET':
-        res = db.reference('/ip').get() if "ip" in db.reference("/").get(shallow=True) else []
+        try:
+            res = db.reference('/ip').get()
+        except:
+            res = []
         return jsonify({'ip_address': res}), 200
     elif request.method == 'POST':
         title = request.get_json().get('title', '')
