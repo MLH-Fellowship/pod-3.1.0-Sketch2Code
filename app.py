@@ -1,4 +1,4 @@
-from flask import Flask, request, send_file, session, render_template, jsonify, flash
+from flask import Flask, request, send_file, session, render_template, jsonify, flash, session
 import os
 import json
 from collections import defaultdict
@@ -23,16 +23,17 @@ def index():
 def history():
     ip = request.remote_addr
     if request.method == 'GET':
-        res = userHistory[ip] if ip in userHistory else []
+        res = session[ip] if ip in session else []
         return jsonify({'ip_address': res}), 200
     elif request.method == 'POST':
         title = request.get_json().get('title', '')
         code = request.get_json().get('code', '')
-
-        userHistory[ip].append({'title': title, 'code': code})
-        while len(userHistory[ip]) > LIMIT:
-            userHistory[ip].pop(0)
+        if ip not in session:
+            session[ip] = []
+        session[ip].append({'title': title, 'code': code})
+        #userHistory[ip].append({'title': title, 'code': code})
+        while len(session[ip]) > LIMIT:
+            session[ip].pop(0)
         return jsonify(success=True), 200
 if __name__ == '__main__':
-    userHistory = defaultdict(list)
     app.run(debug=True) #debug=True so that caching doesn't occur
