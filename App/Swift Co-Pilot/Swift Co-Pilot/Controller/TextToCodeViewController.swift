@@ -12,6 +12,7 @@ class TextToCodeViewController: UIViewController {
     @IBOutlet weak var textInputView: UITextView!
     @IBOutlet weak var suggestionTV: UITextView!
     @IBOutlet weak var compileBtn: UIButton!
+    @IBOutlet weak var bgImage: UIImageView!
     
     var words = String()
     var elementSuggestion = String()
@@ -23,14 +24,34 @@ class TextToCodeViewController: UIViewController {
         textInputView.layer.cornerRadius = 25
         suggestionTV.layer.cornerRadius = 25
         
-        compileBtn.layer.cornerRadius = 14
+        textInputView.layer.borderWidth = 1
+        textInputView.layer.borderColor = UIColor.white.cgColor
+        suggestionTV.layer.borderWidth = 1
+        suggestionTV.layer.borderColor = UIColor.white.cgColor
+        
+        compileBtn.layer.cornerRadius = 10
+        bgImage.loadGif(name: "gif")
+        
+        //MARK:- keyboard dismission method
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
     }
-    @IBAction func dismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    
+    // Keboard dismiss method
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func compileButton(_ sender: Any) {
         textToCode()
+    }
+    
+    @IBAction func clearInput(_ sender: Any) {
+        textInputView.text = ""
+    }
+    @IBAction func showRuleBook(_ sender: Any) {
+        self.performSegue(withIdentifier: keys.valueOf.ruleBookVC, sender: nil)
     }
     
     @IBAction func abbreviationViewButton(_ sender: Any) {

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		559A884926C3143B00D3EB73 /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 559A884826C3143A00D3EB73 /* gif.gif */; };
+		559BF7C626C2FB89003DB92C /* ObjectDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559BF7C526C2FB89003DB92C /* ObjectDetectionViewController.swift */; };
+		559BF7C826C306D3003DB92C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559BF7C726C306D3003DB92C /* SettingsViewController.swift */; };
+		559BF7CA26C3094C003DB92C /* UIDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 559BF7C926C3094C003DB92C /* UIDetector.mlmodel */; };
+		559BF7CC26C31078003DB92C /* SwiftGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559BF7CB26C31078003DB92C /* SwiftGIF.swift */; };
 		55C383C326BCE99B00F83650 /* TextToCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C383C226BCE99B00F83650 /* TextToCodeViewController.swift */; };
 		55C383C526BD1B1200F83650 /* ruleBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C383C426BD1B1200F83650 /* ruleBookViewController.swift */; };
 		55C383C726BD40A100F83650 /* UIAlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C383C626BD40A100F83650 /* UIAlertModel.swift */; };
@@ -46,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		559A884826C3143A00D3EB73 /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
+		559BF7C526C2FB89003DB92C /* ObjectDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionViewController.swift; sourceTree = SOURCE_ROOT; };
+		559BF7C726C306D3003DB92C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
+		559BF7C926C3094C003DB92C /* UIDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UIDetector.mlmodel; sourceTree = "<group>"; };
+		559BF7CB26C31078003DB92C /* SwiftGIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGIF.swift; sourceTree = "<group>"; };
 		55C383C226BCE99B00F83650 /* TextToCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToCodeViewController.swift; sourceTree = "<group>"; };
 		55C383C426BD1B1200F83650 /* ruleBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ruleBookViewController.swift; sourceTree = SOURCE_ROOT; };
 		55C383C626BD40A100F83650 /* UIAlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertModel.swift; sourceTree = "<group>"; };
@@ -109,6 +119,8 @@
 		55C8C97A26B3C48D007686A3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				559BF7C726C306D3003DB92C /* SettingsViewController.swift */,
+				559BF7C526C2FB89003DB92C /* ObjectDetectionViewController.swift */,
 				55C383C826BE2EEB00F83650 /* abbreviationViewController.swift */,
 				55C383C426BD1B1200F83650 /* ruleBookViewController.swift */,
 				55C383C226BCE99B00F83650 /* TextToCodeViewController.swift */,
@@ -142,6 +154,7 @@
 			children = (
 				55C8C98026B3C512007686A3 /* Keys.swift */,
 				55C383C626BD40A100F83650 /* UIAlertModel.swift */,
+				559BF7CB26C31078003DB92C /* SwiftGIF.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -158,6 +171,7 @@
 		55C8C97F26B3C4AE007686A3 /* ML Models */ = {
 			isa = PBXGroup;
 			children = (
+				559BF7C926C3094C003DB92C /* UIDetector.mlmodel */,
 				55C8C98626B3C635007686A3 /* buttonShapeDetector.mlmodel */,
 			);
 			path = "ML Models";
@@ -186,6 +200,7 @@
 		91DB992426B2BE3900F8C5D8 /* Swift Co-Pilot */ = {
 			isa = PBXGroup;
 			children = (
+				559A884826C3143A00D3EB73 /* gif.gif */,
 				55C383CA26BE426C00F83650 /* Loafjet */,
 				55C8C97F26B3C4AE007686A3 /* ML Models */,
 				55C8C97E26B3C4A5007686A3 /* Supporting Files */,
@@ -326,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91DB993226B2BE4000F8C5D8 /* LaunchScreen.storyboard in Resources */,
+				559A884926C3143B00D3EB73 /* gif.gif in Resources */,
 				91DB992F26B2BE4000F8C5D8 /* Assets.xcassets in Resources */,
 				91DB992D26B2BE3900F8C5D8 /* Main.storyboard in Resources */,
 			);
@@ -353,11 +369,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C383C726BD40A100F83650 /* UIAlertModel.swift in Sources */,
+				559BF7CA26C3094C003DB92C /* UIDetector.mlmodel in Sources */,
+				559BF7CC26C31078003DB92C /* SwiftGIF.swift in Sources */,
 				55C8C98526B3C5BB007686A3 /* UIImageModel.swift in Sources */,
 				91DB992A26B2BE3900F8C5D8 /* ViewController.swift in Sources */,
+				559BF7C626C2FB89003DB92C /* ObjectDetectionViewController.swift in Sources */,
 				55C8C98126B3C512007686A3 /* Keys.swift in Sources */,
 				55C383CD26BE44D800F83650 /* resultViewController.swift in Sources */,
 				91DB992626B2BE3900F8C5D8 /* AppDelegate.swift in Sources */,
+				559BF7C826C306D3003DB92C /* SettingsViewController.swift in Sources */,
 				55C8C98726B3C635007686A3 /* buttonShapeDetector.mlmodel in Sources */,
 				91EA581526BC457000AFE2CA /* Result.swift in Sources */,
 				55C383C926BE2EEB00F83650 /* abbreviationViewController.swift in Sources */,
@@ -541,13 +561,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U23VWM3L5A;
+				DEVELOPMENT_TEAM = GJM8829Q7N;
 				INFOPLIST_FILE = "Swift Co-Pilot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.prabaljitwalia.Swift-Co-Pilot";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gokulnair.Swift-Co-Pilot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -560,13 +580,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U23VWM3L5A;
+				DEVELOPMENT_TEAM = GJM8829Q7N;
 				INFOPLIST_FILE = "Swift Co-Pilot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.prabaljitwalia.Swift-Co-Pilot";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gokulnair.Swift-Co-Pilot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

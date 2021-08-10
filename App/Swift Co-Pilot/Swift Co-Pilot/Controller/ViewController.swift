@@ -9,36 +9,42 @@ import UIKit
 import Vision
 import VisionKit
 import CoreML
+import ImageIO
 import Alamofire
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var scanBtn: UIButton!
-    @IBOutlet weak var coPilotBtn: UIButton!
+    @IBOutlet weak var testImage: UIImageView!
+    @IBOutlet weak var bgImage: UIImageView!
     
     private var request = VNRecognizeTextRequest(completionHandler: nil)
     private let buttonDetector = buttonShapeDetector()
-    private var selectedImage = UIImageView()
     private var elementDetected = String()
     static var resultSnippet = [String()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scanBtn.layer.cornerRadius = 14
-        coPilotBtn.layer.cornerRadius = 14
+        scanBtn.layer.cornerRadius = 10
+        testImage.layer.cornerRadius = 25
+        
+        bgImage.loadGif(name: "gif")
+        
+        tabBarController?.tabBar.backgroundImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.layoutIfNeeded()
     }
     
-    @IBAction func testBtn(_ sender: UIButton) {
+    @IBAction func getHistory(_ sender: Any) {
         alamoGet()
     }
     @IBAction func scanButton(_ sender: Any) {
         showDataInputType()
     }
-    
-    @IBAction func coPilotButton(_ sender: Any) {
-        self.performSegue(withIdentifier: keys.valueOf.mainToTextCodeVC, sender: nil)
+    @IBAction func clearImageButton(_ sender: Any) {
+        testImage.image = UIImage()
     }
-    
     
     func showDataInputType() {
         let alert = UIAlertController(title: "Input mode", message: "Select a input mode", preferredStyle: .actionSheet)
@@ -58,6 +64,7 @@ class ViewController: UIViewController {
     }
 }
 
+//MARK:- Image Picker Methods
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func setupImageSelection(){
         
@@ -73,9 +80,8 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        selectedImage.image = image!
+        testImage.image = image
         setupVisionTextRecognition(image: image)
-        
     }
     
     private func setupVisionTextRecognition(image: UIImage?){
@@ -175,8 +181,8 @@ extension ViewController {
         
         var inputImage = [buttonShapeDetectorInput]()
         
-        if let image = selectedImage.image{
-            let newImage =  buffer(from: selectedImage.image!)
+        if let image = testImage.image{
+            let newImage =  buffer(from: testImage.image!)
             let imageForClassification = buttonShapeDetectorInput(image: newImage!)
             inputImage.append(imageForClassification)
         }
@@ -335,15 +341,15 @@ SwiftUI code for UISegment Control
     //MARK:-GET
     func alamoGet(){
         let request = AF.request("http://sketch2code.tech/history")
-            // 2
+        // 2
         request.responseJSON { (data) in
             print(data)
-            }
+        }
         //use this when ip address is added to API 
-//        request.responseDecodable(of: Result.self) { (response) in
-//          guard let results = response.value else { return }
-//          print(results.code)
-//        }
+        //        request.responseDecodable(of: Result.self) { (response) in
+        //          guard let results = response.value else { return }
+        //          print(results.code)
+        //        }
     }
-
+    
 }

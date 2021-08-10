@@ -13,10 +13,15 @@ class resultViewController: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var resultView: UITextView!
+    @IBOutlet weak var bgImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resultView.layer.cornerRadius = 25
+        resultView.layer.borderColor = UIColor.white.cgColor
+        resultView.layer.borderWidth = 1
         resultView.text = ViewController.resultSnippet[0]
+        bgImage.loadGif(name: "gif")
     }
     
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
@@ -30,14 +35,16 @@ class resultViewController: UIViewController {
         }
     }
     
-    @IBAction func copyBtn(_ sender: UIButton) {
+    
+    @IBAction func saveButton(_ sender: Any) {
         UIPasteboard.general.string = resultView.text
-        Loaf.GradientLoaf(message: "Snippet Saved", position: .bottom, loafWidth: 300, loafHeight: 45, cornerRadius: 14, fontStyle: "Avenir Medium", fontSize: 18, bgColor1: .systemOrange, bgColor2: .systemPink, fontColor: .black, loafImage: nil, animationDirection: .Bottom, duration: 3.0, loafjetView: view)
+        Loaf.GradientLoaf(message: "Snippet Saved", position: .top, loafWidth: 300, loafHeight: 45, cornerRadius: 14, fontStyle: "Avenir Medium", fontSize: 18, bgColor1: .systemOrange, bgColor2: .systemPink, fontColor: .black, loafImage: nil, animationDirection: .Top, duration: 3.0, loafjetView: view)
         self.post()
         DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         })
     }
+    
     
 }
 
