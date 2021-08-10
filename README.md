@@ -1,14 +1,60 @@
-# Sketch2Code
+
+
+[![Relative date](https://img.shields.io/date/1577392258?color=important&label=started&logo=github)](https://github.com/MLH-Fellowship/pod-3.1.0-Sketch2Code) 
+[![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/MLH-Fellowship/pod-3.1.0-Sketch2Code)
+![Badge](https://img.shields.io/badge/Xcode-12.0-green)
+![badge](https://img.shields.io/badge/Swift-5.1-red)
+![Badge](https://img.shields.io/badge/Javascript-ES6-brown)
+![badge](https://img.shields.io/badge/Core-ML-yellow)
+![Badge](https://img.shields.io/badge/IBM-Annotations-green)
+
+
+# Sketch2Code🚀
 Sketch-2-Code is a project which focuses on making coding easier and simpler. When it comes to coding in Swift, if we have any* doubts we refer to tutorials, blogs, etc, that was the usual way, But no more old procedures. Sketch-2-Code is the new method to find help. Provide your UI Sketch or Text down your requirements and everything else will be taken care of by S2C(Sketch 2 Code).
 
+# Inspiration❤️
+-
 
-
- ## Features
+# Features ⚡️
 - ```Sketch to Code``` Detects images of UIElements and presents the code snippet for respective elements in both UIKit & SwiftUI.
 - ```Text to Code``` feature added for basic UIElements
 - Supported UIElements in this version include Button, Label & Textfield. 
 - An Image classifier model to differentiate b/w various shapes of UIElement like a button. 
 - ```Save Snippet``` feature added, now user can save all his snippets in the app.
+
+# How to run ?⚙️
+-
+# How Generate Code
+## Sketch 2 Code✏️
+## Text 2 Code 💬
+
+# Tech Stacks🖥
+
+| Tech Stacks | Logo |
+| -- | -- |
+| Xcode | -- |
+| Swift | -- |
+| IBM Annotations| -- |
+| CreateML| -- |
+| JavaScript | -- |
+| HTML | -- |
+| CockroachDB | -- |
+| Postman| -- |
+ 
+ 
+# Libraries📒
+- UIKit
+- VisionKit
+- CoreML
+- [Loafjet](https://github.com/Loafjet/Loafjet)
+- [Alamofire](https://github.com/Alamofire/Alamofire)
+
+# Warnings ⚠️
+- Right now S2C is not that powerful to help you in every prospect, but we are doing our best to provide you the best possible.
+- When we say provide Sketch and Text it's not that simple because there is a set of procedures you need to follow to use S2C.
+- With upcoming versions we focus on making S2C more powerful and more versatile
+
+
 
 # Project Maintainers 👨🏻‍💻
 
@@ -21,9 +67,9 @@ Sketch-2-Code is a project which focuses on making coding easier and simpler. Wh
 ## Requirements to Run
 - Xcode 12+
 - Swift 5+
-- To click an image for input the project needs to run on a physical device with iOS 14.5+ otherwise any image from the photo library can also be used on the simulator
 
-## Limitations
-- Right now S2C is not that powerful to help you in every prospect, but we are doing our best to provide you the best possible.
-- When we say provide Sketch and Text it's not that simple because there is a set of procedures you need to follow to use S2C.
-- With upcoming versions we focus on making S2C more powerful and more versatile
+
+<p align="center" width="100%">
+   Made with ❤️ By Developers   
+</p>
+
