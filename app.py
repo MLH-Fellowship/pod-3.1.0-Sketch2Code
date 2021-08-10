@@ -15,7 +15,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 LIMIT = 10
 database = HistoryActions(os.environ['DATABASE_URL'])
 cred = credentials.Certificate(json.loads(os.environ['FIREBASE_KEY']))
-firebase_admin.initialize_app(cred)
+firebase_admin.initialize_app(cred, {'databaseURL': 'https://sketch2code-877ea-default-rtdb.firebaseio.com/'})
 
 userHistory = defaultdict(list)
 
@@ -38,7 +38,7 @@ def history():
         code = request.get_json().get('code', '')
         #session["ip"].append({'title': title, 'code': code})
         #userHistory["ip"].append({'title': title, 'code': code})
-        db.reference('/ip').push()
+        db.reference()
         db.reference('/ip').push({'title': title, 'code': code})
         sz = len(db.reference("/ip").get())
         if sz > LIMIT:
