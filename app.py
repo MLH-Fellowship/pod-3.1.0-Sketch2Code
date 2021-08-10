@@ -21,7 +21,7 @@ def index():
 
 @app.route('/history', methods=['GET', 'POST'])
 def history():
-    ip = request.remote_addr
+    ip = request.environ['REMOTE_ADDR']
     if request.method == 'GET':
         res = session[ip] if ip in session else []
         return jsonify({'ip_address': res}), 200
