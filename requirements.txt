@@ -7,3 +7,4 @@ Flask-SQLAlchemy
 SQLAlchemy
 sqlalchemy-cockroachdb
 psycopg2
+firebase-admin
