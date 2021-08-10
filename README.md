@@ -23,10 +23,20 @@ Sketch-2-Code is a project which focuses on making coding easier and simpler. Wh
 - ```Save Snippet``` feature added, now user can save all his snippets in the app.
 
 # How to run ?⚙️
--
+
+* Clone or download the app from this repository. 👩‍💻
+* Open project file in terminal. 💻
+* Open ```Swift Co-Pilot.xcodeproj``` in the app folder. 💾
+* Change the bundle identifier. ⚙️
+* Press Ctrl + R to run the app. 📲
+* Do star this repo and/or contribute if you like it.🙂 
+
 # How Generate Code
 ## Sketch 2 Code✏️
 ## Text 2 Code 💬
+
+# Snapshots of App 📸
+
 
 # Tech Stacks🖥
 
