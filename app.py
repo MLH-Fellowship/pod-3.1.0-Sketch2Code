@@ -24,17 +24,15 @@ def history():
     ip = request.environ['REMOTE_ADDR']
     print("ip====",ip)
     if request.method == 'GET':
-        res = session[ip] if ip in session else []
+        res = userHistory["ip"] if "ip" in userHistory else []
         return jsonify({'ip_address': res}), 200
     elif request.method == 'POST':
         title = request.get_json().get('title', '')
         code = request.get_json().get('code', '')
-        if ip not in session:
-            session[ip] = []
-        session[ip].append({'title': title, 'code': code})
-        #userHistory[ip].append({'title': title, 'code': code})
-        while len(session[ip]) > LIMIT:
-            session[ip].pop(0)
+        #session["ip"].append({'title': title, 'code': code})
+        userHistory["ip"].append({'title': title, 'code': code})
+        while len(userHistory["ip"]) > LIMIT:
+            userHistory["ip"].pop(0)
         return jsonify(success=True), 200
 if __name__ == '__main__':
     app.run(debug=True) #debug=True so that caching doesn't occur
