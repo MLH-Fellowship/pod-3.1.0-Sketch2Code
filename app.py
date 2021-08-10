@@ -29,7 +29,7 @@ def history():
         title = request.get_json().get('title', '')
         code = request.get_json().get('code', '')
 
-        userHistory[ip].append([title, code])
+        userHistory[ip].append({'title': title, 'code': code})
         while len(userHistory[ip]) > LIMIT:
             userHistory[ip].pop(0)
         return jsonify(success=True), 200
