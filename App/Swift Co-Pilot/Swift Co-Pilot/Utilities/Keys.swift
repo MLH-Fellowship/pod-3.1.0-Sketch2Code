@@ -15,6 +15,7 @@ class keys {
     let mainToTextCodeVC = "mainToTextCode"
     let textToResultVC = "textToResult"
     let abbreviationVC = "abbreviationVC"
+    let ruleBookVC = "ruleBookVC"
     
     //MARK:- Shape names
     let square = "squares"
