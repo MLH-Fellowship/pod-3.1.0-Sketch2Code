@@ -40,18 +40,28 @@ Sketch-2-Code is a project which focuses on making coding easier and simpler. Wh
 
 # Tech Stacks🖥
 
+<table>
+<tr><td>
+
 | Tech Stacks | Logo |
 | -- | -- |
 | Xcode | ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white) |
 | Swift | ![Swift](https://img.shields.io/badge/swift-%23FA7343.svg?style=for-the-badge&logo=swift&logoColor=white) |
-| IBM Annotations| <img width="80" height = "35" alt="IBM" src="https://user-images.githubusercontent.com/56252259/128967971-8f6d853c-d56f-459d-8707-ee8ec89c9014.png"> |
-| CreateML| <img width="80" height = "35" alt="CreateML" src="https://user-images.githubusercontent.com/56252259/128967854-50a9455c-b9e5-44bf-beda-2d6d2f57a7f9.png"> |
-| JavaScript | ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) |
-| Visual Studio | ![VSCode](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) |
+| IBM Annotations| <img width="70" height = "30" alt="IBM" src="https://user-images.githubusercontent.com/56252259/128967971-8f6d853c-d56f-459d-8707-ee8ec89c9014.png"> |
+| CreateML| <img width="70" height = "30" alt="CreateML" src="https://user-images.githubusercontent.com/56252259/128967854-50a9455c-b9e5-44bf-beda-2d6d2f57a7f9.png"> |
+| Python | ![Python](https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white) |
+
+ </td><td> 
+ 
+| Tech Stacks | Logo |
+| -- | -- | 
+| PyCharm | ![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green) |
 | HTML | ![html](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) |
+| Heroku | ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) |
 | CockroachDB | ![CockroachLabs](https://img.shields.io/badge/Cockroach%20Labs-6933FF?style=for-the-badge&logo=Cockroach%20Labs&logoColor=white) |
 | Postman| ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=red) |
  
+</td></tr> </table>
  
 # Libraries📒
 - UIKit
@@ -88,9 +98,10 @@ Sketch-2-Code is a project which focuses on making coding easier and simpler. Wh
 
 - Feel free to contribute 💪🏼 
 
-## Requirements to Run
+## Requirements to Run 🚩
 - Xcode 12+
 - Swift 5+
+- PyCharm
 
 
 <p align="center" width="100%">
