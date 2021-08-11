@@ -207,31 +207,32 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-Aq-6mb">
                                             <rect key="frame" x="30" y="16" width="184" height="21.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21.5" id="EwA-aU-5Bu"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Ej-z1-lFw">
-                                            <rect key="frame" x="20" y="54" width="374" height="243"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <color key="textColor" systemColor="labelColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVC-1g-PrH">
+                                            <rect key="frame" x="30" y="59" width="364" height="239"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="2Ej-z1-lFw" secondAttribute="bottom" constant="8" id="5qA-se-mVc"/>
-                                        <constraint firstItem="2Ej-z1-lFw" firstAttribute="trailing" secondItem="aQL-L4-bb3" secondAttribute="trailingMargin" id="D9O-Za-wkm"/>
+                                        <constraint firstItem="uVC-1g-PrH" firstAttribute="leading" secondItem="aQL-L4-bb3" secondAttribute="leadingMargin" constant="10" id="19p-6F-chd"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="uVC-1g-PrH" secondAttribute="bottom" constant="7" id="2bd-LJ-UK8"/>
+                                        <constraint firstItem="uVC-1g-PrH" firstAttribute="top" secondItem="Tby-Aq-6mb" secondAttribute="bottom" constant="21.5" id="IBI-oD-xan"/>
                                         <constraint firstItem="Tby-Aq-6mb" firstAttribute="top" secondItem="aQL-L4-bb3" secondAttribute="topMargin" constant="5" id="MCm-ae-7lY"/>
                                         <constraint firstItem="Tby-Aq-6mb" firstAttribute="leading" secondItem="aQL-L4-bb3" secondAttribute="leading" constant="30" id="Vl8-fw-CxG"/>
                                         <constraint firstAttribute="trailing" secondItem="Tby-Aq-6mb" secondAttribute="trailing" constant="200" id="gJG-MS-Z4p"/>
-                                        <constraint firstItem="2Ej-z1-lFw" firstAttribute="top" secondItem="Tby-Aq-6mb" secondAttribute="bottom" constant="16.5" id="sXc-dO-wCR"/>
-                                        <constraint firstItem="2Ej-z1-lFw" firstAttribute="leading" secondItem="aQL-L4-bb3" secondAttribute="leadingMargin" id="v2m-uZ-F28"/>
+                                        <constraint firstItem="uVC-1g-PrH" firstAttribute="trailing" secondItem="aQL-L4-bb3" secondAttribute="trailingMargin" id="u1e-E0-zzl"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="codeTextView" destination="2Ej-z1-lFw" id="HRi-gi-nBJ"/>
+                                    <outlet property="codeLabel" destination="uVC-1g-PrH" id="5Df-8E-jgs"/>
                                     <outlet property="titleLabel" destination="Tby-Aq-6mb" id="WhG-i0-M2l"/>
                                 </connections>
                             </tableViewCell>

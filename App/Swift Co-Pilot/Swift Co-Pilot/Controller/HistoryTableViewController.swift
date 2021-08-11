@@ -40,7 +40,7 @@ class HistoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryTableViewCell
         cell.titleLabel.text = titles[indexPath.row]
-        cell.codeTextView.text = codes[indexPath.row]
+        cell.codeLabel.text = codes[indexPath.row]
         return cell
     }
 
