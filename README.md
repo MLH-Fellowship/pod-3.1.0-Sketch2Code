@@ -64,7 +64,11 @@ Sketch-2-Code is a project which focuses on making coding easier and simpler. Wh
 - When we say provide Sketch and Text it's not that simple because there is a set of procedures you need to follow to use S2C.
 - With upcoming versions we focus on making S2C more powerful and more versatile
 
+## MLH Pre-Fellowship( Summer 2021)
 
+> This is a hackathon project made by MLH Fellows - Pod 3.1.0 i.e. Recursive Rhinos - Team 4
+
+[![MLH Fellowship](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/challenge_photos/001/113/145/datas/full_width.jpg)](https://github.com/MLH-Fellowship)
 
 # Project Maintainers 👨🏻‍💻
 
