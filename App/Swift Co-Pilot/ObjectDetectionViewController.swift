@@ -16,12 +16,25 @@ class ObjectDetectionViewController: UIViewController {
     @IBOutlet weak var selectedImage: UIImageView!
     @IBOutlet weak var showCodeBtn: UIButton!
     @IBOutlet weak var bgImage: UIImageView!
+    @IBOutlet weak var clearBtn: UIButton!
+    
+    private var detectedElements = [String]()
+    private var swiftCodes = [String]()
+    private var swiftUICode = [String]()
+    
+    private var finalSwiftCode = String()
+    private var swiftUIFinalCode = String()
+    
+    private var isAddImageMode = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bgImage.loadGif(name: "gif")
         selectedImage.layer.cornerRadius = 25
         showCodeBtn.layer.cornerRadius = 10
-        bgImage.loadGif(name: "gif")
+        clearBtn.isHidden = true
+        
+        showCodeBtn.setTitle("Sketch Down", for: .normal)
     }
     @IBAction func addImage(_ sender: Any) {
         showDataInputType()
@@ -29,10 +42,25 @@ class ObjectDetectionViewController: UIViewController {
     
     @IBAction func showCodeButton(_ sender: Any) {
         
+        if isAddImageMode {
+            showDataInputType()
+        }else {
+            if detectedElements.count != 0 {
+                generateCode(elements: detectedElements)
+            }else {
+                errorAlert(mesg: "No Elements detected")
+            }
+        }
+        
     }
     
     @IBAction func clearImage(_ sender: Any) {
         selectedImage.image = UIImage()
+        detectedElements.removeAll()
+        DispatchQueue.main.async {
+            self.showCodeBtn.setTitle("Sketch Down", for: .normal)
+            self.isAddImageMode = true
+        }
     }
     
     lazy var detectionRequest: VNCoreMLRequest = {
@@ -107,12 +135,16 @@ extension ObjectDetectionViewController {
         
         image.draw(at: CGPoint.zero)
         
+        detectedElements.removeAll()
+        
         for detection in detections {
             
             print(detection.labels.map({"\($0.identifier) confidence: \($0.confidence)"}).joined(separator: "\n"))
             print("------------")
             
-            //            The coordinates are normalized to the dimensions of the processed image, with the origin at the image's lower-left corner.
+            detectedElements.append(detection.labels.map({$0.identifier})[0])
+            print(detectedElements)
+            
             let boundingBox = detection.boundingBox
             let rectangle = CGRect(x: boundingBox.minX*image.size.width, y: (1-boundingBox.minY-boundingBox.height)*image.size.height, width: boundingBox.width*image.size.width, height: boundingBox.height*image.size.height)
             UIColor(red: 0, green: 1, blue: 0, alpha: 0.4).setFill()
@@ -123,6 +155,11 @@ extension ObjectDetectionViewController {
         UIGraphicsEndImageContext()
         self.selectedImage.image = newImage
         
+        Loaf.dismissWheel(loafWheelView: view)
+        DispatchQueue.main.async {
+            self.showCodeBtn.setTitle("Show Code", for: .normal)
+            self.isAddImageMode = false
+        }
     }
 }
 
@@ -152,5 +189,44 @@ extension ObjectDetectionViewController: UIImagePickerControllerDelegate, UINavi
         let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         selectedImage.image = image!
         updateDetections(for: image!)
+        clearBtn.isHidden = false
+        
+        Loaf.LoafWheel(message: "ML Model Processing", loafWidth: 280, loafHeight: 110, cornerRadius: 20, bgColor1: .orange, bgColor2: .systemPink, fontStyle: "Avenir Medium", fontSize: 17, fontColor: .black, duration: .greatestFiniteMagnitude, wheelStyle: .medium, blurEffect: .light, loafWheelView: view)
+    }
+}
+
+//MARK:- Code Snippet Provider
+extension ObjectDetectionViewController {
+    func generateCode(elements: [String]) {
+        let totalElements = elements.count
+        for i in 0..<totalElements {
+            switch elements[i] {
+            case "Buttons":
+                swiftCodes.append("UIButton")
+                swiftUICode.append("SwiftUI Buttons")
+            case "Image":
+                swiftCodes.append("UIImage")
+                swiftUICode.append("SwiftUI Image")
+            case "TF":
+                swiftCodes.append("UITextField")
+                swiftUICode.append("SwiftUI TextField")
+            default:
+                errorAlert(mesg: "No elements found")
+            }
+        }
+        
+        print(swiftCodes)
+        print(swiftUICode)
+        
+        ViewController.resultSnippet.removeAll()
+        
+        
+        finalSwiftCode = self.swiftCodes.joined(separator: "\n")
+        swiftUIFinalCode = self.swiftUICode.joined(separator: "\n")
+        
+        ViewController.resultSnippet.append(finalSwiftCode)
+        ViewController.resultSnippet.append(swiftUIFinalCode)
+        
+        self.performSegue(withIdentifier: keys.valueOf.ObjectDetToResultVC, sender: nil)
     }
 }

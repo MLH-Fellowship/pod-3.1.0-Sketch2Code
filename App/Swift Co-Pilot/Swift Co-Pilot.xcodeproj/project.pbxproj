@@ -21,6 +21,7 @@
 		55C8C98126B3C512007686A3 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C8C98026B3C512007686A3 /* Keys.swift */; };
 		55C8C98526B3C5BB007686A3 /* UIImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C8C98426B3C5BB007686A3 /* UIImageModel.swift */; };
 		55C8C98726B3C635007686A3 /* buttonShapeDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55C8C98626B3C635007686A3 /* buttonShapeDetector.mlmodel */; };
+		55CFF10926C4081A007D425B /* CodeHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CFF10826C4081A007D425B /* CodeHistoryViewController.swift */; };
 		9141582D26BAEE19005CE599 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9141582C26BAEE19005CE599 /* Alamofire */; };
 		91DB992626B2BE3900F8C5D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB992526B2BE3900F8C5D8 /* AppDelegate.swift */; };
 		91DB992826B2BE3900F8C5D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB992726B2BE3900F8C5D8 /* SceneDelegate.swift */; };
@@ -65,6 +66,7 @@
 		55C8C98226B3C5A0007686A3 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = resultViewController.swift; path = "Swift Co-Pilot/View/resultViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C8C98426B3C5BB007686A3 /* UIImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageModel.swift; sourceTree = "<group>"; };
 		55C8C98626B3C635007686A3 /* buttonShapeDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = buttonShapeDetector.mlmodel; sourceTree = "<group>"; };
+		55CFF10826C4081A007D425B /* CodeHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeHistoryViewController.swift; sourceTree = SOURCE_ROOT; };
 		91DB992226B2BE3900F8C5D8 /* Swift Co-Pilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Co-Pilot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DB992526B2BE3900F8C5D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DB992726B2BE3900F8C5D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		55C8C97A26B3C48D007686A3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				55CFF10826C4081A007D425B /* CodeHistoryViewController.swift */,
 				559BF7C726C306D3003DB92C /* SettingsViewController.swift */,
 				559BF7C526C2FB89003DB92C /* ObjectDetectionViewController.swift */,
 				55C383C826BE2EEB00F83650 /* abbreviationViewController.swift */,
@@ -376,6 +379,7 @@
 				559BF7C626C2FB89003DB92C /* ObjectDetectionViewController.swift in Sources */,
 				55C8C98126B3C512007686A3 /* Keys.swift in Sources */,
 				55C383CD26BE44D800F83650 /* resultViewController.swift in Sources */,
+				55CFF10926C4081A007D425B /* CodeHistoryViewController.swift in Sources */,
 				91DB992626B2BE3900F8C5D8 /* AppDelegate.swift in Sources */,
 				559BF7C826C306D3003DB92C /* SettingsViewController.swift in Sources */,
 				55C8C98726B3C635007686A3 /* buttonShapeDetector.mlmodel in Sources */,
