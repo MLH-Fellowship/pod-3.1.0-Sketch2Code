@@ -44,9 +44,10 @@ Sketch-2-Code is a project which focuses on making coding easier and simpler. Wh
 | -- | -- |
 | Xcode | ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white) |
 | Swift | ![Swift](https://img.shields.io/badge/swift-%23FA7343.svg?style=for-the-badge&logo=swift&logoColor=white) |
-| IBM Annotations| -- |
-| CreateML| -- |
+| IBM Annotations| <img width="80" height = "35" alt="IBM" src="https://user-images.githubusercontent.com/56252259/128967971-8f6d853c-d56f-459d-8707-ee8ec89c9014.png"> |
+| CreateML| <img width="80" height = "35" alt="CreateML" src="https://user-images.githubusercontent.com/56252259/128967854-50a9455c-b9e5-44bf-beda-2d6d2f57a7f9.png"> |
 | JavaScript | ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) |
+| Visual Studio | ![VSCode](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) |
 | HTML | ![html](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) |
 | CockroachDB | ![CockroachLabs](https://img.shields.io/badge/Cockroach%20Labs-6933FF?style=for-the-badge&logo=Cockroach%20Labs&logoColor=white) |
 | Postman| ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=red) |
