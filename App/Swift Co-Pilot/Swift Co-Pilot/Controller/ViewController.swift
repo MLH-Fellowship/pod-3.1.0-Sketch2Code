@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var scanBtn: UIButton!
     @IBOutlet weak var testImage: UIImageView!
     @IBOutlet weak var bgImage: UIImageView!
+    @IBOutlet weak var clearBtn: UIButton!
     
     private var request = VNRecognizeTextRequest(completionHandler: nil)
     private let buttonDetector = buttonShapeDetector()
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         scanBtn.layer.cornerRadius = 10
         testImage.layer.cornerRadius = 25
+        clearBtn.isHidden = true
         
         bgImage.loadGif(name: "gif")
         
@@ -37,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func getHistory(_ sender: Any) {
-        alamoGet()
+       // alamoGet()
     }
     @IBAction func scanButton(_ sender: Any) {
         showDataInputType()
@@ -49,13 +51,11 @@ class ViewController: UIViewController {
     func showDataInputType() {
         let alert = UIAlertController(title: "Input mode", message: "Select a input mode", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-            let scannerViewController = VNDocumentCameraViewController()
-            scannerViewController.delegate = self
-            self.present(scannerViewController, animated: true)
+            self.setupImageSelection(type: "camera")
         }))
         
         alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
-            self.setupImageSelection()
+            self.setupImageSelection(type: "gallery")
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -66,14 +66,22 @@ class ViewController: UIViewController {
 
 //MARK:- Image Picker Methods
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func setupImageSelection(){
+    func setupImageSelection(type: String){
         
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+        if type == "gallery" {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.allowsEditing = true
             imagePicker.sourceType = .photoLibrary
             self.present(imagePicker, animated: true)
+        }else if type == "camera" {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true
+            imagePicker.sourceType = .camera
+            self.present(imagePicker, animated: true)
+        }else {
+            print("cancel")
         }
     }
     
@@ -82,6 +90,9 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         testImage.image = image
         setupVisionTextRecognition(image: image)
+        clearBtn.isHidden = false
+        
+        Loaf.LoafWheel(message: "ML Model Processing", loafWidth: 280, loafHeight: 110, cornerRadius: 20, bgColor1: .orange, bgColor2: .systemPink, fontStyle: "Avenir Medium", fontSize: 17, fontColor: .black, duration: .greatestFiniteMagnitude, wheelStyle: .medium, blurEffect: .light, loafWheelView: view)
     }
     
     private func setupVisionTextRecognition(image: UIImage?){
@@ -337,6 +348,7 @@ SwiftUI code for UISegment Control
         }
         
         self.performSegue(withIdentifier: keys.valueOf.scanToResultVC, sender: nil)
+        Loaf.dismissWheel(loafWheelView: view)
     }
     //MARK:-GET
     func alamoGet(){

@@ -42,16 +42,16 @@
                                 <rect key="frame" x="25" y="173" width="364" height="615"/>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p9i-kK-O2p">
-                                <rect key="frame" x="30" y="183" width="354" height="525"/>
+                                <rect key="frame" x="30" y="183" width="354" height="515"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="IdG-jH-tOu" appends="YES" id="VAU-bT-tFf"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OR-3d-hcg">
-                                <rect key="frame" x="25" y="738" width="364" height="50"/>
+                                <rect key="frame" x="25" y="728" width="364" height="60"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="yNM-pr-HbX"/>
+                                    <constraint firstAttribute="height" constant="60" id="yNM-pr-HbX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
                                 <state key="normal" title="Show Code">
@@ -94,12 +94,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sketch 2 Code 🚀" id="ZKA-Uv-zbW">
-                        <barButtonItem key="rightBarButtonItem" image="tray.full" catalog="system" id="ild-52-aV8"/>
+                        <barButtonItem key="rightBarButtonItem" image="tray.full" catalog="system" id="ild-52-aV8">
+                            <connections>
+                                <segue destination="b9n-QO-Gqh" kind="show" id="NBv-Zd-EZH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bgImage" destination="LeY-s8-EoG" id="gW8-ES-StS"/>
+                        <outlet property="clearBtn" destination="GCL-Fq-2Gw" id="8Df-j5-R0p"/>
                         <outlet property="selectedImage" destination="p9i-kK-O2p" id="YKt-SE-fFC"/>
                         <outlet property="showCodeBtn" destination="6OR-3d-hcg" id="4XI-AC-OJ8"/>
+                        <segue destination="ULY-b6-rfT" kind="show" identifier="ObjectDetToResultVC" id="dwM-Hj-aWb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcq-4S-USy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -123,10 +129,10 @@
                                 <rect key="frame" x="25" y="173" width="364" height="615"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBI-S6-EXt">
-                                <rect key="frame" x="25" y="738" width="364" height="50"/>
+                                <rect key="frame" x="25" y="728" width="364" height="60"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="GsD-kS-FcE"/>
+                                    <constraint firstAttribute="height" constant="60" id="GsD-kS-FcE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
                                 <state key="normal" title="Sketch Down">
@@ -137,7 +143,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJO-is-hUw">
-                                <rect key="frame" x="30" y="183" width="354" height="525"/>
+                                <rect key="frame" x="30" y="183" width="354" height="515"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p45-dI-0cd">
                                 <rect key="frame" x="358" y="148" width="36" height="30"/>
@@ -174,11 +180,13 @@
                         <barButtonItem key="rightBarButtonItem" image="tray.full" catalog="system" id="ZX6-bq-YaE">
                             <connections>
                                 <action selector="getHistory:" destination="BYZ-38-t0r" id="z3C-fD-beN"/>
+                                <segue destination="b9n-QO-Gqh" kind="show" id="Tbr-1G-Wa9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bgImage" destination="k3f-ZG-Pgt" id="mdY-bw-tt3"/>
+                        <outlet property="clearBtn" destination="p45-dI-0cd" id="a1u-kx-TyX"/>
                         <outlet property="scanBtn" destination="GBI-S6-EXt" id="XPV-G3-fiu"/>
                         <outlet property="testImage" destination="SJO-is-hUw" id="OlB-pn-OFH"/>
                         <segue destination="ULY-b6-rfT" kind="show" identifier="scanToResultVC" id="rPg-vt-9FB"/>
@@ -187,6 +195,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="755.07246376811599" y="-422.54464285714283"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="mYj-Yl-4Rg">
+            <objects>
+                <viewController id="b9n-QO-Gqh" customClass="CodeHistoryViewController" customModule="Swift_Co_Pilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rSH-Hl-igI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xB4-e5-nAX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="Vnq-gS-g1y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lX3-W6-unl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2367" y="-554"/>
         </scene>
         <!--Code Down-->
         <scene sceneID="NQo-lt-UOx">
@@ -373,7 +397,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Text 2 Code 🚀" id="fdH-IK-Jez">
                         <rightBarButtonItems>
-                            <barButtonItem image="tray.full" catalog="system" id="uMV-Gw-rFQ"/>
+                            <barButtonItem image="tray.full" catalog="system" id="uMV-Gw-rFQ">
+                                <connections>
+                                    <segue destination="b9n-QO-Gqh" kind="show" id="tf3-hs-7YU"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem image="book.circle" catalog="system" id="Rmp-gU-UYx">
                                 <connections>
                                     <action selector="showRuleBook:" destination="FIT-Y0-D36" id="jrA-Zo-jA8"/>
@@ -534,7 +562,7 @@
                     <tabBarItem key="tabBarItem" title="" image="doc.text.viewfinder" catalog="system" id="Ng7-cH-Kb4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="5rp-8g-Owv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -569,7 +597,7 @@
                     <tabBarItem key="tabBarItem" title="" image="text.quote" catalog="system" id="XAs-8G-0ky"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="SuH-id-Ov5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -602,7 +630,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2l8-Rx-5Oi"/>
+        <segue reference="dwM-Hj-aWb"/>
+        <segue reference="NBv-Zd-EZH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.circle" catalog="system" width="128" height="121"/>
