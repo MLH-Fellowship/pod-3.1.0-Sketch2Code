@@ -57,6 +57,7 @@ Sketch-2-Code is a project which focuses on making coding easier and simpler. Wh
 - UIKit
 - VisionKit
 - CoreML
+- ImageIO
 - [Loafjet](https://github.com/Loafjet/Loafjet)
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 
