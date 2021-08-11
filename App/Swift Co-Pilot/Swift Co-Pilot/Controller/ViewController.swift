@@ -10,7 +10,6 @@ import Vision
 import VisionKit
 import CoreML
 import ImageIO
-import Alamofire
 
 class ViewController: UIViewController {
     
@@ -39,8 +38,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func getHistory(_ sender: Any) {
-//        alamoGet()
-//        newGet()
+
         self.performSegue(withIdentifier: "homeToHistory", sender: self)
     }
     @IBAction func scanButton(_ sender: Any) {
@@ -342,48 +340,5 @@ SwiftUI code for UISegment Control
         
         self.performSegue(withIdentifier: keys.valueOf.scanToResultVC, sender: nil)
     }
-    //MARK:-GET
-    func alamoGet(){
-        let request = AF.request("http://sketch2code.tech/history")
-        // 2
-        request.responseJSON { (data) in
-            print(data)
-        }
-        //use this when ip address is added to API 
-        //        request.responseDecodable(of: Result.self) { (response) in
-        //          guard let results = response.value else { return }
-        //          print(results.code)
-        //        }
-    }
-    
-    func newGet(){
-             let session = URLSession.shared
-                     let url = URL(string: "http://sketch2code.tech/history")!
-                     let task = session.dataTask(with: url, completionHandler: { data, response, error in
-                        // print(response)
-                         
-                         if error != nil {
-                             print(error)
-                             return
-                         }
-                         
-                         do {
-                             let json = try JSONDecoder().decode(Result.self, from: data! )
-                                 //try JSONSerialization.jsonObject(with: data!, options: [])
-                            let totalCodes = json.ip_address.count
-                            for i in 0..<totalCodes {
-                                print("Title:\(json.ip_address[i].title)")
-                                print("Code:\(json.ip_address[i].code)")
-                                self.codes.append(json.ip_address[i].code)
-                            }
-                            print("THIS IS NEW: \(self.codes)")
-                           
-                            //print(json)
-                         } catch {
-                             print("Error during JSON serialization: \(error)")
-                         }
-                         
-                     })
-                     task.resume()
-         }
+   
 }

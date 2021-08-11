@@ -34,9 +34,7 @@ class HistoryTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return titles.count
     }
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryTableViewCell
         cell.titleLabel.text = titles[indexPath.row]
@@ -52,7 +50,6 @@ extension HistoryTableViewController{
              let session = URLSession.shared
                      let url = URL(string: "http://sketch2code.tech/history")!
                      let task = session.dataTask(with: url, completionHandler: { data, response, error in
-                        // print(response)
                          
                          if error != nil {
                              print(error)
