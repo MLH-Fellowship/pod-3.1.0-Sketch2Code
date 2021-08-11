@@ -182,11 +182,70 @@
                         <outlet property="scanBtn" destination="GBI-S6-EXt" id="XPV-G3-fiu"/>
                         <outlet property="testImage" destination="SJO-is-hUw" id="OlB-pn-OFH"/>
                         <segue destination="ULY-b6-rfT" kind="show" identifier="scanToResultVC" id="rPg-vt-9FB"/>
+                        <segue destination="QST-sP-t1u" kind="show" identifier="homeToHistory" id="tfe-cC-k22"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="755.07246376811599" y="-422.54464285714283"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="dvz-6I-xRs">
+            <objects>
+                <tableViewController id="QST-sP-t1u" customClass="HistoryTableViewController" customModule="Swift_Co_Pilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GKd-Nm-nWX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="316" id="PET-O0-MX2" customClass="HistoryTableViewCell" customModule="Swift_Co_Pilot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="316"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PET-O0-MX2" id="aQL-L4-bb3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="316"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-Aq-6mb">
+                                            <rect key="frame" x="30" y="16" width="184" height="21.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Ej-z1-lFw">
+                                            <rect key="frame" x="20" y="54" width="374" height="243"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <color key="textColor" systemColor="labelColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2Ej-z1-lFw" secondAttribute="bottom" constant="8" id="5qA-se-mVc"/>
+                                        <constraint firstItem="2Ej-z1-lFw" firstAttribute="trailing" secondItem="aQL-L4-bb3" secondAttribute="trailingMargin" id="D9O-Za-wkm"/>
+                                        <constraint firstItem="Tby-Aq-6mb" firstAttribute="top" secondItem="aQL-L4-bb3" secondAttribute="topMargin" constant="5" id="MCm-ae-7lY"/>
+                                        <constraint firstItem="Tby-Aq-6mb" firstAttribute="leading" secondItem="aQL-L4-bb3" secondAttribute="leading" constant="30" id="Vl8-fw-CxG"/>
+                                        <constraint firstAttribute="trailing" secondItem="Tby-Aq-6mb" secondAttribute="trailing" constant="200" id="gJG-MS-Z4p"/>
+                                        <constraint firstItem="2Ej-z1-lFw" firstAttribute="top" secondItem="Tby-Aq-6mb" secondAttribute="bottom" constant="16.5" id="sXc-dO-wCR"/>
+                                        <constraint firstItem="2Ej-z1-lFw" firstAttribute="leading" secondItem="aQL-L4-bb3" secondAttribute="leadingMargin" id="v2m-uZ-F28"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="codeTextView" destination="2Ej-z1-lFw" id="HRi-gi-nBJ"/>
+                                    <outlet property="titleLabel" destination="Tby-Aq-6mb" id="WhG-i0-M2l"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QST-sP-t1u" id="ZkZ-bc-TYG"/>
+                            <outlet property="delegate" destination="QST-sP-t1u" id="PO2-j1-uK2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="History" id="tbj-DZ-2Un"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wB-Jp-kVv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1608.6956521739132" y="-413.16964285714283"/>
         </scene>
         <!--Code Down-->
         <scene sceneID="NQo-lt-UOx">
@@ -534,7 +593,7 @@
                     <tabBarItem key="tabBarItem" title="" image="doc.text.viewfinder" catalog="system" id="Ng7-cH-Kb4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="5rp-8g-Owv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -569,7 +628,7 @@
                     <tabBarItem key="tabBarItem" title="" image="text.quote" catalog="system" id="XAs-8G-0ky"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="SuH-id-Ov5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -588,7 +647,7 @@
                     <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" id="B3t-8c-aG1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZCC-M9-vS1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -602,7 +661,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2l8-Rx-5Oi"/>
+        <segue reference="rPg-vt-9FB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.circle" catalog="system" width="128" height="121"/>

@@ -14,6 +14,8 @@ import Alamofire
 
 class ViewController: UIViewController {
     
+    var codes:[String] = []
+    
     @IBOutlet weak var scanBtn: UIButton!
     @IBOutlet weak var testImage: UIImageView!
     @IBOutlet weak var bgImage: UIImageView!
@@ -37,7 +39,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func getHistory(_ sender: Any) {
-        alamoGet()
+//        alamoGet()
+//        newGet()
+        self.performSegue(withIdentifier: "homeToHistory", sender: self)
     }
     @IBAction func scanButton(_ sender: Any) {
         showDataInputType()
@@ -352,4 +356,34 @@ SwiftUI code for UISegment Control
         //        }
     }
     
+    func newGet(){
+             let session = URLSession.shared
+                     let url = URL(string: "http://sketch2code.tech/history")!
+                     let task = session.dataTask(with: url, completionHandler: { data, response, error in
+                        // print(response)
+                         
+                         if error != nil {
+                             print(error)
+                             return
+                         }
+                         
+                         do {
+                             let json = try JSONDecoder().decode(Result.self, from: data! )
+                                 //try JSONSerialization.jsonObject(with: data!, options: [])
+                            let totalCodes = json.ip_address.count
+                            for i in 0..<totalCodes {
+                                print("Title:\(json.ip_address[i].title)")
+                                print("Code:\(json.ip_address[i].code)")
+                                self.codes.append(json.ip_address[i].code)
+                            }
+                            print("THIS IS NEW: \(self.codes)")
+                           
+                            //print(json)
+                         } catch {
+                             print("Error during JSON serialization: \(error)")
+                         }
+                         
+                     })
+                     task.resume()
+         }
 }
