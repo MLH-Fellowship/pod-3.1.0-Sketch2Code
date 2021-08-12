@@ -13,7 +13,10 @@
 Sketch-2-Code is a project which focuses on making coding easier and simpler. When it comes to coding in Swift, if we have any* doubts we refer to tutorials, blogs, etc, that was the usual way, But no more old procedures. Sketch-2-Code is the new method to find help. Provide your UI Sketch or Text down your requirements and everything else will be taken care of by S2C(Sketch 2 Code).
 
 # Inspiration❤️
--
+Sketch 2 Code was a project which no one could have thought since August 8th 2021, when we decided of doing somethings like this. The idea came when we realised how automation in web development is making it easy and quicker. At the same time people were getting less intrested in App Devlopment. At that point we realised  there is nothing like this in App Development. So we thought how we can bring a change in App Development process. When we thought of something like this we were clueless of how to start and how to assemble it. But later with the flow we tried various techniques, various languages and got one which would suit our requirements.
+
+Eventually with flow of time we made the normal procedure more easy and user friendly to developers by adding Machine Learning technology into S2C. 
+
 
 # Features ⚡️
 - ```Sketch to Code``` Detects images of UIElements and presents the code snippet for respective elements in both UIKit & SwiftUI.
@@ -37,8 +40,8 @@ In total we have 2 types of code generators:
 ## Sketch 2 Code✏️
 - Rigt now we have two type of Sketch 2 Code conversion:
 ## 1. Single Elelemnt Detecion
-- In this we have concentrated on single UIElelement detection. There are times when developers need to code of a particular type of UIElement.
-- So in such cases user can go on with using the Single Element Detection.
+- In this we have concentrated on single UIElelement detection. There are times when developers need code of a specific type of UIElement.
+- So in such cases users can go on with using the Single Element Detection.
 #### Rules
 - While using this feature developer need to provide the name of the element above and its shape.
 - Providing name is really important
