@@ -89,12 +89,15 @@ Make sure you spell the element type correctly🪄
 <img width="400" height = "600" alt="Screenshot 2021-08-12 at 4 12 48 PM" src="https://user-images.githubusercontent.com/56252259/129183943-449e816e-d150-4f9e-b53d-97422cdce342.png"> <img width="400" height = "600" alt="Screenshot 2021-08-12 at 4 15 22 PM" src="https://user-images.githubusercontent.com/56252259/129184212-4ca9c45c-74de-40f9-8210-8115512d4d44.png">
 
 Make sure you draw a rectangle box and add your UIElements inside it.
-Make sure you spell the element type correctly🪄. You need to follow the naming type given above.
 
-### Text 2 Code 💬
+Make sure you spell the element type correctly🪄. 
+
+You need to follow the naming type as given above.
+
+## Text 2 Code 💬
 - Text 2 Code is an additional feature which we have added for people who are not good in sketching😅. 
 - Using Text 2 Code is really easy and simple, just start writing the element type and the suggestion box in the app will show you the order of writing.
-- While writing te text you need to follow a set of order, which will be provided automatically by the App.
+- While writing the text you need to follow a set of order, which will be provided automatically by the App.
 
 <!--#### Elements which can be detected
 1. Buttons
@@ -141,7 +144,8 @@ Make sure you spell the element type correctly🪄. You need to follow the namin
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 
 # Whats next? 📱
-- With the upcoming releases we have thought of bringing various new features like:
+
+With the upcoming releases we have thought of bringing various new features like:
 
 I.   Multiple Coding Language Support
 
@@ -157,6 +161,12 @@ V.   Release Sketch2Code as a Beta release to know user feedback
 - Right now S2C is not that powerful to help you in every prospect, but we are doing our best to provide you the best possible.
 - When we say provide Sketch and Text it's not that simple because there is a set of procedures you need to follow to use S2C.
 - With upcoming versions we focus on making S2C more powerful and more versatile
+
+## Requirements to Run 🚩
+- Xcode 12+
+- Swift 5+
+- PyCharm
+
 
 ## MLH Pre-Fellowship( Summer 2021)
 
@@ -178,12 +188,6 @@ V.   Release Sketch2Code as a Beta release to know user feedback
 | [@Alex](https://github.com/amin-codes) | Backend |
 
 - Feel free to contribute 💪🏼 
-
-## Requirements to Run 🚩
-- Xcode 12+
-- Swift 5+
-- PyCharm
-
 
 <p align="center" width="100%">
    Made with ❤️ By Developers   
