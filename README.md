@@ -4,13 +4,23 @@
 
 </p>
 
+![Forks](https://img.shields.io/github/forks/MLH-Fellowship/pod-3.1.0-Sketch2Code?style=social)
+![Stars](https://img.shields.io/github/stars/MLH-Fellowship/pod-3.1.0-Sketch2Code?style=social) 
+![Watchers](https://img.shields.io/github/watchers/MLH-Fellowship/pod-3.1.0-Sketch2Code?style=social) 
+![Issues](https://img.shields.io/github/issues/MLH-Fellowship/pod-3.1.0-Sketch2Code) 
+![PRs](https://img.shields.io/github/issues-pr-raw/MLH-Fellowship/pod-3.1.0-Sketch2Code) 
+![MIT License](https://img.shields.io/github/license/MLH-Fellowship/pod-3.1.0-Sketch2Code) 
+![Top Language](https://img.shields.io/github/languages/top/pod-3.1.0-Sketch2Code/FellowStories) 
+![Languages](https://img.shields.io/github/languages/count/MLH-Fellowship/pod-3.1.0-Sketch2Code)
+![activity](https://img.shields.io/github/commit-activity/m/MLH-Fellowship/FellowStories) 
+![contributors](https://img.shields.io/github/contributors-anon/MLH-Fellowship/pod-3.1.0-Sketch2Code)
+![size](https://img.shields.io/github/languages/code-size/MLH-Fellowship/pod-3.1.0-Sketch2Code)
+![lines](https://img.shields.io/tokei/lines/github/MLH-Fellowship/pod-3.1.0-Sketch2Code)
 [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/MLH-Fellowship/pod-3.1.0-Sketch2Code)
 ![Badge](https://img.shields.io/badge/Xcode-12.0-green)
 ![badge](https://img.shields.io/badge/Swift-5.1-red)
 ![Badge](https://img.shields.io/badge/Python-3.9-brown)
 ![badge](https://img.shields.io/badge/Core-ML-yellow)
-![Badge](https://img.shields.io/badge/IBM-Annotations-green)
-
 
 # Sketch2Code🚀
 Sketch-2-Code is a project which focuses on making coding easier and simpler. When it comes to coding in Swift, if we have any* doubts we refer to tutorials, blogs, etc, that was the usual way, But no more old procedures. Sketch-2-Code is the new method to find help. Provide your UI Sketch or Text down your requirements and everything else will be taken care of by S2C(Sketch 2 Code).
