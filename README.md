@@ -34,14 +34,15 @@ Sketch-2-Code is a project which focuses on making coding easier and simpler. Wh
 # How Generate Code
 ## Sketch 2 Code✏️
 - Rigt now we have two type of Sketch 2 Code conversion:
-1. Single Elelemnt Detecion
+## 1. Single Elelemnt Detecion
 - In this we have concentrated on single UIElelement detection. There are times when developers need to code of a particular type of UIElement.
 - So in such cases user can go on with using the Single Element Detection.
-## Rules
+#### Rules
 - While using this feature developer need to provide the name of the element above and its shape.
 - Providing name is really important
 - And for elements like Buttons, TextFields user need to provide its shape too.
-### Elements which can be detected
+
+#### Elements which can be detected
 | Elements  | Sketch |
 | -- | -- |
 | Buttons | ✅ |
@@ -53,16 +54,21 @@ Sketch-2-Code is a project which focuses on making coding easier and simpler. Wh
 
 ### Quick Demo
 
+<img width="400" alt="Screenshot 2021-08-12 at 4 12 58 PM" src="https://user-images.githubusercontent.com/56252259/129183908-d19ece27-27f3-41d0-98f5-25aa8ea90350.png">
 
-2. UI Screen Detection
+## 2. UI Screen Detection
 - As the project tite suggests our prior motve was to ease the work of coding UI stuffs.
 - If you want to get code of a particular UI screen then you can use this feature.
-### Elements which can be detected
+
+#### Elements which can be detected
 1. ImageView
 2. Buttons
 3. TextField
 
 ### Quick Demo
+
+<img width="400" alt="Screenshot 2021-08-12 at 4 12 48 PM" src="https://user-images.githubusercontent.com/56252259/129183943-449e816e-d150-4f9e-b53d-97422cdce342.png">
+
 
 ## Text 2 Code 💬
 
