@@ -39,9 +39,24 @@ class HistoryTableViewController: UIViewController, UITableViewDelegate,UITableV
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryTableViewCell
         cell.titleLabel.text = titles[indexPath.row]
-        cell.codeTextView.text = codes[indexPath.row]
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(identifier: "CodeDetailViewController") as! CodeDetailViewController
+        vc.codeDes = codes[indexPath.row]
+        vc.navTitle = titles[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let indexPath = tableView.indexPathForSelectedRow
+//            // Get the Row of the Index Path and set as index
+//            let index = indexPath?.row
+//            // Get in touch with the DetailViewController
+//            let detailViewController = segue.destination as! CodeDetailViewController
+//            // Pass on the data to the Detail ViewController by setting it's indexPathRow value
+//        detailViewController.index = index
+//    }
 
 
 

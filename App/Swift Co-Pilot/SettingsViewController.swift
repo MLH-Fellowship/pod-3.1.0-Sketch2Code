@@ -6,13 +6,18 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        let vc = UIHostingController(rootView: SetttingsTab())
+        present(vc, animated: true)
     }
     
 
