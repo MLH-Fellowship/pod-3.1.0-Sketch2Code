@@ -90,7 +90,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         setupVisionTextRecognition(image: image)
         clearBtn.isHidden = false
         
-        Loaf.LoafWheel(message: "ML Model Processing", loafWidth: 280, loafHeight: 110, cornerRadius: 20, bgColor1: .orange, bgColor2: .systemPink, fontStyle: "Avenir Medium", fontSize: 17, fontColor: .black, duration: .greatestFiniteMagnitude, wheelStyle: .medium, blurEffect: .light, loafWheelView: view)
+        Loaf.LoafWheel(message: "Processing", loafWidth: 280, loafHeight: 110, cornerRadius: 20, bgColor1: .orange, bgColor2: .systemPink, fontStyle: "Avenir Medium", fontSize: 17, fontColor: .black, duration: .greatestFiniteMagnitude, wheelStyle: .medium, blurEffect: .light, loafWheelView: view)
     }
     
     private func setupVisionTextRecognition(image: UIImage?){
@@ -312,23 +312,70 @@ extension ViewController {
         case 4:
             ViewController.resultSnippet =
                 ["""
-UITextView
+let textView = UITextView(frame: CGRect(x: 20.0, y: 90.0, width: 250.0, height: 100.0))
+textView.contentInsetAdjustmentBehavior = .automatic
+textView.center = self.view.center
+textView.textAlignment = NSTextAlignment.justified
+textView.textColor = UIColor.blue
+textView.backgroundColor = UIColor.lightGray
 """,
                  """
-SwiftUI code for UItextView
+Text("Add your text")
 """]
         case 5:
             ViewController.resultSnippet =
                 ["""
 UISwitch
+  override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let switchDemo=UISwitch(frame:CGRect(x: 150, y: 150, width: 0, height: 0))
+        switchDemo.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
+        switchDemo.setOn(true, animated: false)
+        self.view.addSubview(switchDemo)
+        
+    }
+    
+    @objc func switchStateDidChange(_ sender:UISwitch!)
+    {
+        if (sender.isOn == true){
+            //action when switch is on
+        }
+        else{
+            //action when switch is off
+        }
+    }
 """,
                  """
-SwiftUI code for UISwitch
+Toggle("Optional Message", isOn: $stateBinding)
+                .toggleStyle(SwitchToggleStyle(tint: .green))
 """]
         case 6:
             ViewController.resultSnippet =
                 ["""
-UIView
+UIView:
+override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        let myNewView=UIView(frame: CGRect(x: 10, y: 100, width: 300, height: 200))
+        
+        // Change UIView background colour
+        myNewView.backgroundColor=UIColor.lightGray
+        
+        // Add rounded corners to UIView
+        myNewView.layer.cornerRadius=25
+        
+        // Add border to UIView
+        myNewView.layer.borderWidth=2
+        
+        // Change UIView Border Color to Red
+        myNewView.layer.borderColor = UIColor.red.cgColor
+        
+        // Add UIView as a Subview
+        self.view.addSubview(myNewView)
+        
+    }
 """,
                  """
 UIView is not present in SwiftUI
@@ -336,10 +383,56 @@ UIView is not present in SwiftUI
         case 7:
             ViewController.resultSnippet =
                 ["""
-UISegment Control
+UISegment Control:
+override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        let mySegmentedControl = UISegmentedControl (items: ["One","Two","Three"])
+        
+        let xPostion:CGFloat = 10
+        let yPostion:CGFloat = 150
+        let elementWidth:CGFloat = 300
+        let elementHeight:CGFloat = 30
+        
+        mySegmentedControl.frame = CGRect(x: xPostion, y: yPostion, width: elementWidth, height: elementHeight)
+        
+        // Make second segment selected
+        mySegmentedControl.selectedSegmentIndex = 1
+        
+        //Change text color of UISegmentedControl
+        mySegmentedControl.tintColor = UIColor.yellow
+        
+        //Change UISegmentedControl background colour
+        mySegmentedControl.backgroundColor = UIColor.black
+        
+        // Add function to handle Value Changed events
+        mySegmentedControl.addTarget(self, action: #selector(self.segmentedValueChanged(_:)), for: .valueChanged)
+        
+        self.view.addSubview(mySegmentedControl)
+    }
+    
+    @objc func segmentedValueChanged(_ sender:UISegmentedControl!)
+    {
+    //action when values are changed
+    }
+
 """,
                  """
-SwiftUI code for UISegment Control
+struct ContentView: View {
+    @State private var favoriteColor = 0
+
+    var body: some View {
+        VStack {
+            Picker(selection: $favoriteColor, label: Text("What is your favorite color?")) {
+                Text("Red").tag(0)
+                Text("Green").tag(1)
+                Text("Blue").tag(2)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+        }
+    }
+}
 """]
         default:
             break

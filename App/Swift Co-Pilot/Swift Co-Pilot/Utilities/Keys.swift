@@ -25,4 +25,5 @@ class keys {
     
     //MARK:- cell ID
     let rulesCellID = "rulesCellID"
+    let historyCell = "cell"
 }

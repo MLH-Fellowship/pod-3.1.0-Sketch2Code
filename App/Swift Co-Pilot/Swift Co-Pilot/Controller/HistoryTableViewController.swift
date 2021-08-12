@@ -20,6 +20,7 @@ class HistoryTableViewController: UIViewController, UITableViewDelegate,UITableV
         tableView.delegate = self
         tableView.dataSource = self
         newGet()
+        self.tableView.layer.cornerRadius = 10
 
 
     }
@@ -37,7 +38,7 @@ class HistoryTableViewController: UIViewController, UITableViewDelegate,UITableV
     }
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier:"cell", for: indexPath) as! HistoryTableViewCell
         cell.titleLabel.text = titles[indexPath.row]
         return cell
     }
