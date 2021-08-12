@@ -26,12 +26,6 @@ Later when we realised that it was not easy for all to draw Sketch of UI and pro
 
 Ever thought somethings like this, Now feel the essence of imaginary things getting real.
 
-
-# Features ⚡️
-- ```Sketch to Code``` provides code snippet for UIElements in Swift & SwiftUI.
-- ```Text to Code``` generates code snippet based on text provided.
-- ```Save Snippet``` used to save code snippet.
-
 # Architecture
 The Sketch2Code solution uses the following elements:
 
@@ -108,8 +102,12 @@ Make sure you spell the element type correctly🪄. You need to follow the namin
 
 # Snapshots of App 📸
 
+# Features ⚡️
+- ```Sketch to Code``` provides code snippet for UIElements in Swift & SwiftUI.
+- ```Text to Code``` generates code snippet based on text provided.
+- ```Save Snippet``` used to save code snippet.
 
-# Tech Stacks🖥
+# Tech Stacks 🖥
 
 <table>
 <tr><td>
@@ -141,6 +139,14 @@ Make sure you spell the element type correctly🪄. You need to follow the namin
 - ImageIO
 - [Loafjet](https://github.com/Loafjet/Loafjet)
 - [Alamofire](https://github.com/Alamofire/Alamofire)
+
+# Whats next? 📱
+- With the upcoming releases we have thought of bringing various new features like:
+I.   Multiple Coding Language Support
+II.  Add more UIElements
+III. Adding enhanced NLP in Text2Code, to make it more versatile
+IV.  Make object detection more enhanced
+V.   Release Sketch2Code as a Beta release to know user feedback
 
 # Warnings ⚠️
 - Right now S2C is not that powerful to help you in every prospect, but we are doing our best to provide you the best possible.
