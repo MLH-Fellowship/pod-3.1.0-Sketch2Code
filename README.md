@@ -29,11 +29,9 @@ Ever thought somethings like this, Now feel the essence of imaginary things gett
 
 
 # Features ⚡️
-- ```Sketch to Code``` Detects images of UIElements and presents the code snippet for respective elements in both UIKit & SwiftUI.
-- ```Text to Code``` feature added for basic UIElements
-- Supported UIElements in this version include Button, Label & Textfield. 
-- An Image classifier model to differentiate b/w various shapes of UIElement like a button. 
-- ```Save Snippet``` feature added, now user can save all his snippets in the app.
+- ```Sketch to Code``` provides code snippet for UIElements in Swift & SwiftUI.
+- ```Text to Code``` generates code snippet based on text provided.
+- ```Save Snippet``` used to save code snippet.
 
 # Architecture
 The Sketch2Code solution uses the following elements:
