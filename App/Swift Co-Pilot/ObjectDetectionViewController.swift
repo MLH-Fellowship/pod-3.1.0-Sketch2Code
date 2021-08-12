@@ -10,6 +10,7 @@ import CoreML
 import Vision
 import VisionKit
 import ImageIO
+import SwiftUI
 
 class ObjectDetectionViewController: UIViewController {
     
@@ -40,6 +41,10 @@ class ObjectDetectionViewController: UIViewController {
         showDataInputType()
     }
     
+    @IBAction func settingsButton(_ sender: Any) {
+        let vc = UIHostingController(rootView: SetttingsTab())
+        present(vc, animated: true)
+    }
     @IBAction func showCodeButton(_ sender: Any) {
         
         if isAddImageMode {

@@ -10,6 +10,7 @@ import Vision
 import VisionKit
 import CoreML
 import ImageIO
+import SwiftUI
 
 class ViewController: UIViewController {
     
@@ -37,7 +38,9 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.layoutIfNeeded()
     }
     
-    @IBAction func getHistory(_ sender: Any) {
+    @IBAction func settingsView(_ sender: Any) {
+        let vc = UIHostingController(rootView: SetttingsTab())
+        present(vc, animated: true)
     }
     @IBAction func scanButton(_ sender: Any) {
         showDataInputType()
@@ -180,6 +183,7 @@ extension ViewController {
             codeSnippet(snippetNo: 7)
             return
         default:
+            Loaf.dismissWheel(loafWheelView: view)
             print("error")
             return
         }

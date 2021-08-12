@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,20 +15,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🚀" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZD-kC-VpO">
-                                <rect key="frame" x="20" y="94" width="374" height="718"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="160"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yhX-yo-fsn">
+                                <rect key="frame" x="15" y="354.5" width="384" height="187"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="187" id="B5L-Hg-yoR"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jZD-kC-VpO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Efx-KP-7Bp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZD-kC-VpO" secondAttribute="trailing" constant="20" id="G0i-Hh-rKo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jZD-kC-VpO" secondAttribute="bottom" constant="50" id="jV2-Qn-yn6"/>
-                            <constraint firstItem="jZD-kC-VpO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="qLD-Ll-GQ5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yhX-yo-fsn" secondAttribute="trailing" constant="15" id="O76-WK-p1A"/>
+                            <constraint firstItem="yhX-yo-fsn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eaE-Ok-NTb"/>
+                            <constraint firstItem="yhX-yo-fsn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hyW-D9-gZy"/>
+                            <constraint firstItem="yhX-yo-fsn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="tko-fn-VaG"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,8 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="logo" width="1600" height="900"/>
     </resources>
 </document>

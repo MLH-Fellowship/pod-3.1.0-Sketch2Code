@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class TextToCodeViewController: UIViewController {
     
@@ -41,6 +42,11 @@ class TextToCodeViewController: UIViewController {
     // Keboard dismiss method
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    @IBAction func settingsButton(_ sender: Any) {
+        let vc = UIHostingController(rootView: SetttingsTab())
+        present(vc, animated: true)
     }
     
     @IBAction func compileButton(_ sender: Any) {
