@@ -214,24 +214,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bwk-2w-44g" id="KC7-IE-Tkp">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK6-MM-sFA">
-                                                    <rect key="frame" x="40" y="21" width="304" height="52"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="kK6-MM-sFA" secondAttribute="bottom" constant="20" id="0dd-p9-8Lu"/>
-                                                <constraint firstItem="kK6-MM-sFA" firstAttribute="top" secondItem="KC7-IE-Tkp" secondAttribute="topMargin" constant="10" id="EAD-Ox-Vlb"/>
-                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="kK6-MM-sFA" secondAttribute="trailing" constant="50" id="F9c-qk-iTG"/>
-                                                <constraint firstItem="kK6-MM-sFA" firstAttribute="leading" secondItem="KC7-IE-Tkp" secondAttribute="leadingMargin" constant="20" id="epU-A9-LEf"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="titleLabel" destination="kK6-MM-sFA" id="mAA-hB-hjf"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -692,7 +675,7 @@
                     <tabBarItem key="tabBarItem" title="" image="text.quote" catalog="system" id="XAs-8G-0ky"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="SuH-id-Ov5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -711,7 +694,7 @@
                     <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" id="B3t-8c-aG1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="chevron.left" catalog="system" largeTitles="YES" id="ZCC-M9-vS1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
