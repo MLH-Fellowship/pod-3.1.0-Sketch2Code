@@ -1,4 +1,8 @@
+<p align="center" width="100%">
+ 
+ <img width="800" alt="S2C" src="https://user-images.githubusercontent.com/56252259/129200700-7dc994cb-7503-456a-a8cf-ad7a9abfb02f.png"> 
 
+</p>
 
 [![Relative date](https://img.shields.io/date/1577392258?color=important&label=started&logo=github)](https://github.com/MLH-Fellowship/pod-3.1.0-Sketch2Code) 
 [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/MLH-Fellowship/pod-3.1.0-Sketch2Code)
