@@ -142,10 +142,15 @@ Make sure you spell the element type correctly🪄. You need to follow the namin
 
 # Whats next? 📱
 - With the upcoming releases we have thought of bringing various new features like:
+
 I.   Multiple Coding Language Support
+
 II.  Add more UIElements
+
 III. Adding enhanced NLP in Text2Code, to make it more versatile
+
 IV.  Make object detection more enhanced
+
 V.   Release Sketch2Code as a Beta release to know user feedback
 
 # Warnings ⚠️
