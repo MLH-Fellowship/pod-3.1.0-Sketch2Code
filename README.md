@@ -31,7 +31,9 @@ Sketch-2-Code is a project which focuses on making coding easier and simpler. Wh
 * Press Ctrl + R to run the app. 📲
 * Do star this repo and/or contribute if you like it.🙂 
 
-# How Generate Code
+# How to Generate Code ?
+In total we have 2 types of code generators:
+
 ## Sketch 2 Code✏️
 - Rigt now we have two type of Sketch 2 Code conversion:
 ## 1. Single Elelemnt Detecion
