@@ -55,16 +55,19 @@ The Sketch2Code solution uses the following elements:
 In total we have 2 types of code generators:
 
 ## Sketch 2 Code✏️
-- Rigt now we have two type of Sketch 2 Code conversion:
-## 1. Single Elelemnt Detecion
+Rigt now we have two type of Sketch 2 Code conversion:
+
+### 1. Single Elelemnt Detecion
+
 - In this we have concentrated on single UIElelement detection. There are times when developers need code of a specific type of UIElement.
 - So in such cases users can go on with using the Single Element Detection.
+
 #### Rules
 - While using this feature developer need to provide the name of the element above and its shape.
 - Providing name is really important
 - And for elements like Buttons, TextFields user need to provide its shape too.
 
-#### Elements which can be detected
+<!-- #### Elements which can be detected
 | Elements  | Sketch |
 | -- | -- |
 | Buttons | ✅ |
@@ -72,37 +75,39 @@ In total we have 2 types of code generators:
 | TextView | ✅ |
 | Segment Control | ❌ |
 | Labels | ❌ |
-| Switches | ❌ |
+| Switches | ❌ | -->
 
 ### Quick Demo
 
 <img width="400" alt="Screenshot 2021-08-12 at 4 12 58 PM" src="https://user-images.githubusercontent.com/56252259/129183908-d19ece27-27f3-41d0-98f5-25aa8ea90350.png">
-- Make sure you spell the element type correctly🪄
 
-## 2. UI Screen Detection
+Make sure you spell the element type correctly🪄
+
+### 2. UI Screen Detection
+
 - As the project tite suggests our prior motve was to ease the work of coding UI stuffs.
 - If you want to get code of a particular UI screen then you can use this feature.
 
-#### Elements which can be detected
+<!--#### Elements which can be detected
 1. ImageView(I)
 2. Buttons(BUTTONS)
-3. TextField(TF)
+3. TextField(TF)-->
 
 ### Quick Demo
 
 <img width="400" height = "600" alt="Screenshot 2021-08-12 at 4 12 48 PM" src="https://user-images.githubusercontent.com/56252259/129183943-449e816e-d150-4f9e-b53d-97422cdce342.png"> <img width="400" height = "600" alt="Screenshot 2021-08-12 at 4 15 22 PM" src="https://user-images.githubusercontent.com/56252259/129184212-4ca9c45c-74de-40f9-8210-8115512d4d44.png">
 
-- Make sure you draw a rectangle box and add your UIElements inside it.
-- Make sure you spell the element type correctly🪄. You need to follow the naming type given above.
+Make sure you draw a rectangle box and add your UIElements inside it.
+Make sure you spell the element type correctly🪄. You need to follow the naming type given above.
 
-## Text 2 Code 💬
+### Text 2 Code 💬
 - Text 2 Code is an additional feature which we have added for people who are not good in sketching😅. 
 - Using Text 2 Code is really easy and simple, just start writing the element type and the suggestion box in the app will show you the order of writing.
 - While writing te text you need to follow a set of order, which will be provided automatically by the App.
 
-#### Elements which can be detected
+<!--#### Elements which can be detected
 1. Buttons
-2. Labels
+2. Labels-->
 
 # Snapshots of App 📸
 
