@@ -262,18 +262,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MfM-cN-gzu">
-                                <rect key="frame" x="20" y="228" width="374" height="519"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MfM-cN-gzu">
+                                <rect key="frame" x="20" y="198" width="374" height="614"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASN-Wf-4iK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASN-Wf-4iK">
                                 <rect key="frame" x="337" y="142" width="57" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="DFv-Dm-vJb"/>
+                                    <constraint firstAttribute="height" constant="36" id="q2n-m6-Gy7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" image="doc.badge.plus" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
@@ -285,6 +287,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9GX-FB-1h3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9GX-FB-1h3" firstAttribute="trailing" secondItem="MfM-cN-gzu" secondAttribute="trailing" constant="20" id="3QM-H4-Qli"/>
+                            <constraint firstItem="MfM-cN-gzu" firstAttribute="top" secondItem="ASN-Wf-4iK" secondAttribute="bottom" constant="20" id="CjJ-OQ-85C"/>
+                            <constraint firstItem="MfM-cN-gzu" firstAttribute="leading" secondItem="9GX-FB-1h3" secondAttribute="leading" constant="20" id="Oc7-yh-NGl"/>
+                            <constraint firstItem="9GX-FB-1h3" firstAttribute="bottom" secondItem="MfM-cN-gzu" secondAttribute="bottom" constant="50" id="VHB-2R-E4C"/>
+                            <constraint firstItem="ASN-Wf-4iK" firstAttribute="top" secondItem="9GX-FB-1h3" secondAttribute="top" constant="98" id="gvQ-SA-g4j"/>
+                            <constraint firstItem="9GX-FB-1h3" firstAttribute="trailing" secondItem="ASN-Wf-4iK" secondAttribute="trailing" constant="20" id="p1V-9M-5Qh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dXO-4d-WDV"/>
                     <connections>
@@ -646,7 +656,7 @@
                     <tabBarItem key="tabBarItem" title="" image="doc.text.viewfinder" catalog="system" id="Ng7-cH-Kb4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="5rp-8g-Owv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -658,7 +668,7 @@
             </objects>
             <point key="canvasLocation" x="-155.07246376811597" y="-422.54464285714283"/>
         </scene>
-        <!--Settings-->
+        <!--Settings View Controller-->
         <scene sceneID="qsA-RB-Ua2">
             <objects>
                 <viewController id="uvt-pL-tzy" customClass="SettingsViewController" customModule="Swift_Co_Pilot" customModuleProvider="target" sceneMemberID="viewController">
@@ -668,7 +678,7 @@
                         <viewLayoutGuide key="safeArea" id="su6-bJ-U6w"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="qP3-Ef-Ug9"/>
+                    <navigationItem key="navigationItem" id="qP3-Ef-Ug9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxH-cc-FxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

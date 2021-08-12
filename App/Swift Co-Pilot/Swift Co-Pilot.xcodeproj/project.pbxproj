@@ -25,6 +25,8 @@
 		9107C95326C4461C009683ED /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9107C95226C4461C009683ED /* HistoryTableViewCell.swift */; };
 		9141582D26BAEE19005CE599 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9141582C26BAEE19005CE599 /* Alamofire */; };
 		91CCAAD326C4FA8B0078CB61 /* CodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CCAAD226C4FA8B0078CB61 /* CodeDetailViewController.swift */; };
+		91CCAAD626C531D40078CB61 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CCAAD526C531D40078CB61 /* SettingsCell.swift */; };
+		91CCAAD826C532100078CB61 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CCAAD726C532100078CB61 /* SettingsTab.swift */; };
 		91DB992626B2BE3900F8C5D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB992526B2BE3900F8C5D8 /* AppDelegate.swift */; };
 		91DB992826B2BE3900F8C5D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB992726B2BE3900F8C5D8 /* SceneDelegate.swift */; };
 		91DB992A26B2BE3900F8C5D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB992926B2BE3900F8C5D8 /* ViewController.swift */; };
@@ -71,6 +73,8 @@
 		9107C95026C4454A009683ED /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		9107C95226C4461C009683ED /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewCell.swift; path = "../../../../../../Downloads/pod-3.1.0-Sketch2Code/App/Swift Co-Pilot/Swift Co-Pilot/Controller/HistoryTableViewCell.swift"; sourceTree = "<group>"; };
 		91CCAAD226C4FA8B0078CB61 /* CodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDetailViewController.swift; sourceTree = "<group>"; };
+		91CCAAD526C531D40078CB61 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		91CCAAD726C532100078CB61 /* SettingsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
 		91DB992226B2BE3900F8C5D8 /* Swift Co-Pilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Co-Pilot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DB992526B2BE3900F8C5D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DB992726B2BE3900F8C5D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 		55C8C97B26B3C493007686A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				91CCAAD426C531BB0078CB61 /* Settings */,
 				91DB992B26B2BE3900F8C5D8 /* Main.storyboard */,
 				91DB992E26B2BE4000F8C5D8 /* Assets.xcassets */,
 				91DB993026B2BE4000F8C5D8 /* LaunchScreen.storyboard */,
@@ -184,6 +189,15 @@
 				55C8C98626B3C635007686A3 /* buttonShapeDetector.mlmodel */,
 			);
 			path = "ML Models";
+			sourceTree = "<group>";
+		};
+		91CCAAD426C531BB0078CB61 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				91CCAAD526C531D40078CB61 /* SettingsCell.swift */,
+				91CCAAD726C532100078CB61 /* SettingsTab.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		91DB991926B2BE3900F8C5D8 = {
@@ -381,6 +395,7 @@
 				559BF7CA26C3094C003DB92C /* UIDetector.mlmodel in Sources */,
 				559BF7CC26C31078003DB92C /* SwiftGIF.swift in Sources */,
 				55C8C98526B3C5BB007686A3 /* UIImageModel.swift in Sources */,
+				91CCAAD826C532100078CB61 /* SettingsTab.swift in Sources */,
 				91DB992A26B2BE3900F8C5D8 /* ViewController.swift in Sources */,
 				559BF7C626C2FB89003DB92C /* ObjectDetectionViewController.swift in Sources */,
 				55C8C98126B3C512007686A3 /* Keys.swift in Sources */,
@@ -391,6 +406,7 @@
 				91EA581526BC457000AFE2CA /* Result.swift in Sources */,
 				55C383C926BE2EEB00F83650 /* abbreviationViewController.swift in Sources */,
 				55C383C526BD1B1200F83650 /* ruleBookViewController.swift in Sources */,
+				91CCAAD626C531D40078CB61 /* SettingsCell.swift in Sources */,
 				91CCAAD326C4FA8B0078CB61 /* CodeDetailViewController.swift in Sources */,
 				9107C95126C4454A009683ED /* HistoryTableViewController.swift in Sources */,
 				9107C95326C4461C009683ED /* HistoryTableViewCell.swift in Sources */,
