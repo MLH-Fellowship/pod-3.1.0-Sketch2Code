@@ -208,15 +208,15 @@
                                 <rect key="frame" x="0.0" y="148" width="414" height="665"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="120" id="Bwk-2w-44g" customClass="HistoryTableViewCell" customModule="Swift_Co_Pilot" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="104" id="Bwk-2w-44g" customClass="HistoryTableViewCell" customModule="Swift_Co_Pilot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bwk-2w-44g" id="KC7-IE-Tkp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK6-MM-sFA">
-                                                    <rect key="frame" x="40" y="21" width="304" height="68"/>
+                                                    <rect key="frame" x="40" y="21" width="304" height="52"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -225,7 +225,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="kK6-MM-sFA" secondAttribute="bottom" constant="20" id="0dd-p9-8Lu"/>
                                                 <constraint firstItem="kK6-MM-sFA" firstAttribute="top" secondItem="KC7-IE-Tkp" secondAttribute="topMargin" constant="10" id="EAD-Ox-Vlb"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="kK6-MM-sFA" secondAttribute="trailing" constant="50" id="F9c-qk-iTG"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="kK6-MM-sFA" secondAttribute="trailing" constant="50" id="F9c-qk-iTG"/>
                                                 <constraint firstItem="kK6-MM-sFA" firstAttribute="leading" secondItem="KC7-IE-Tkp" secondAttribute="leadingMargin" constant="20" id="epU-A9-LEf"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -263,7 +263,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MfM-cN-gzu">
-                                <rect key="frame" x="20" y="198" width="374" height="614"/>
+                                <rect key="frame" x="20" y="150" width="374" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -271,12 +271,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASN-Wf-4iK">
-                                <rect key="frame" x="337" y="142" width="57" height="36"/>
+                                <rect key="frame" x="337" y="94" width="57" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="DFv-Dm-vJb"/>
                                     <constraint firstAttribute="height" constant="36" id="q2n-m6-Gy7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" image="doc.badge.plus" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
@@ -292,7 +293,7 @@
                             <constraint firstItem="MfM-cN-gzu" firstAttribute="top" secondItem="ASN-Wf-4iK" secondAttribute="bottom" constant="20" id="CjJ-OQ-85C"/>
                             <constraint firstItem="MfM-cN-gzu" firstAttribute="leading" secondItem="9GX-FB-1h3" secondAttribute="leading" constant="20" id="Oc7-yh-NGl"/>
                             <constraint firstItem="9GX-FB-1h3" firstAttribute="bottom" secondItem="MfM-cN-gzu" secondAttribute="bottom" constant="50" id="VHB-2R-E4C"/>
-                            <constraint firstItem="ASN-Wf-4iK" firstAttribute="top" secondItem="9GX-FB-1h3" secondAttribute="top" constant="98" id="gvQ-SA-g4j"/>
+                            <constraint firstItem="ASN-Wf-4iK" firstAttribute="top" secondItem="9GX-FB-1h3" secondAttribute="top" constant="50" id="gvQ-SA-g4j"/>
                             <constraint firstItem="9GX-FB-1h3" firstAttribute="trailing" secondItem="ASN-Wf-4iK" secondAttribute="trailing" constant="20" id="p1V-9M-5Qh"/>
                         </constraints>
                     </view>
@@ -691,7 +692,7 @@
                     <tabBarItem key="tabBarItem" title="" image="text.quote" catalog="system" id="XAs-8G-0ky"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="SuH-id-Ov5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -709,7 +710,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X0o-U4-ctB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" id="B3t-8c-aG1"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZCC-M9-vS1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="chevron.left" catalog="system" largeTitles="YES" id="ZCC-M9-vS1">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -729,6 +730,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.circle" catalog="system" width="128" height="121"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="doc.badge.gearshape" catalog="system" width="119" height="128"/>
         <image name="doc.badge.plus" catalog="system" width="119" height="128"/>
         <image name="doc.text.viewfinder" catalog="system" width="128" height="115"/>
@@ -755,6 +757,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

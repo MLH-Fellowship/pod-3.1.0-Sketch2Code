@@ -27,7 +27,7 @@ struct SetttingsTab: View {
                     Button(action: {
                         self.showFeatures()
                     }) {
-                        SettingsCell(title: "Features", imgName: "sparkles", clr: .blue)
+                        SettingsCell(title: "Features", imgName: "sparkles", clr: .orange)
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                 }
@@ -36,14 +36,14 @@ struct SetttingsTab: View {
                     Button(action: {
                         self.writeReview()
                     }) {
-                        SettingsCell(title: "Write a Review", imgName: "pencil.and.outline", clr: .blue)
+                        SettingsCell(title: "Write a Review", imgName: "pencil.and.outline", clr: .orange)
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                     
                     Button(action: {
                         self.shareWithFriends()
                     }) {
-                        SettingsCell(title: "Tell your friends", imgName: "gift", clr: .blue)
+                        SettingsCell(title: "Tell your friends", imgName: "gift", clr: .orange)
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                 }
@@ -52,14 +52,14 @@ struct SetttingsTab: View {
                     Button(action: {
                         self.suggestFeature()
                     }) {
-                        SettingsCell(title: "Suggest a feature", imgName: "star.circle", clr: .blue)
+                        SettingsCell(title: "Suggest a feature", imgName: "star.circle", clr: .orange)
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                     
                     Button(action: {
                         self.reportBug()
                     }) {
-                        SettingsCell(title: "Report a bug", imgName: "exclamationmark.triangle", clr: .blue)
+                        SettingsCell(title: "Report a bug", imgName: "exclamationmark.triangle", clr: .orange)
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                 }
