@@ -67,7 +67,7 @@ Sketch-2-Code is a project which focuses on making coding easier and simpler. Wh
 
 ### Quick Demo
 
-<img width="400" alt="Screenshot 2021-08-12 at 4 12 48 PM" src="https://user-images.githubusercontent.com/56252259/129183943-449e816e-d150-4f9e-b53d-97422cdce342.png">
+<img width="400" height = "600" alt="Screenshot 2021-08-12 at 4 12 48 PM" src="https://user-images.githubusercontent.com/56252259/129183943-449e816e-d150-4f9e-b53d-97422cdce342.png"> <img width="400" height = "600" alt="Screenshot 2021-08-12 at 4 15 22 PM" src="https://user-images.githubusercontent.com/56252259/129184212-4ca9c45c-74de-40f9-8210-8115512d4d44.png">
 
 
 ## Text 2 Code 💬
