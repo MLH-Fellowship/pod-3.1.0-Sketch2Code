@@ -31,6 +31,10 @@ Ever thought somethings like this, Now feel the essence of imaginary things gett
 - An Image classifier model to differentiate b/w various shapes of UIElement like a button. 
 - ```Save Snippet``` feature added, now user can save all his snippets in the app.
 
+# Architecture
+The Sketch2Code solution uses the following elements:
+<img width="800" alt="Screenshot 2021-08-12 at 4 12 58 PM" src="https://user-images.githubusercontent.com/56252259/129193965-49ad8078-8976-442d-a3cd-e505724210d8.png">
+
 # How to run ?⚙️
 
 * Clone or download the app from this repository. 👩‍💻
