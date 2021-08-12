@@ -4,7 +4,6 @@
 
 </p>
 
-[![Relative date](https://img.shields.io/date/1577392258?color=important&label=started&logo=github)](https://github.com/MLH-Fellowship/pod-3.1.0-Sketch2Code) 
 [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/MLH-Fellowship/pod-3.1.0-Sketch2Code)
 ![Badge](https://img.shields.io/badge/Xcode-12.0-green)
 ![badge](https://img.shields.io/badge/Swift-5.1-red)
