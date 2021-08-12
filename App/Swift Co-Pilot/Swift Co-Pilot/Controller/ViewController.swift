@@ -217,6 +217,7 @@ extension ViewController {
                     print("ml model detected triangle")
                 }
                 else {
+                    Loaf.dismissWheel(loafWheelView: view)
                     // Provide default code for identified UIElement
                     print("ml model detected nil")
                 }
@@ -236,10 +237,10 @@ extension ViewController {
                 codeSnippet(snippetNo: 1)
             }
             else if shape == keys.valueOf.circle{
-                // code snippet with button of circular shape
+                codeSnippet(snippetNo: 8)
             }
             else if shape == keys.valueOf.triangle {
-                // code snippet with button of triangular shape
+                codeSnippet(snippetNo: 9)
             }
             return
         case "view":
@@ -247,11 +248,10 @@ extension ViewController {
                 codeSnippet(snippetNo: 6)
             }
             else if shape == keys.valueOf.circle {
-                
-                // code snippet with view of circular shape
+                codeSnippet(snippetNo: 10)
             }
             else if shape == keys.valueOf.triangle {
-                // code snippet with button of triangular shape
+               codeSnippet(snippetNo: 11)
             }
             return
         default:
@@ -264,180 +264,34 @@ extension ViewController {
     func codeSnippet(snippetNo: Int) {
         switch snippetNo {
         case 1:
-            ViewController.resultSnippet =
-                [ """
-            let button = UIButton()
-            button.frame = CGRect(x: view.center.x, y: view.center.y, width: 100, height: 100)
-            button.setTitle("", for: .normal)
-            button.layer.cornerRadius = 0
-            button.layer.borderWidth = 0
-            button.layer.borderColor = UIColor.clear.cgColor
-""",
-                  """
-                              Button(action:{
-                                  //do something when button is tapped
-                              }){
-                                  Text("Title")
-                              }.padding()
-                              .foregroundColor(.blue)
-                              .background(Rectangle().fill(Color.white))
-                             //adjust width, height or alignment
-                              .frame(width: 100, height: 100)
-  """]
+            ViewController.resultSnippet = snippets.get.buttons
+               
         case 2:
-            ViewController.resultSnippet =
-                [ """
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-            label.center = CGPoint(x: 160, y: 285)
-            label.textAlignment = .center
-            label.text = "I'm a test label"
-            self.view.addSubview(label)
-""",
-                  """
-              Label("SwiftUI Label", systemImage: "book.fill")
-                .labelStyle(TitleOnlyLabelStyle())
-  """]
+            ViewController.resultSnippet = snippets.get.labels
+               
         case 3:
-            ViewController.resultSnippet =
-                [ """
-            UITextField
-""",
-                  """
-              struct ContentView: View {
-                  @State var username: String = ""
-                  
-                  var body: some View {
-                      VStack(alignment: .leading) {
-                          TextField("Enter username...", text: $username)
-                      }.padding()
-                  }
-              }
-  """]
+            ViewController.resultSnippet = snippets.get.textField
+               
         case 4:
-            ViewController.resultSnippet =
-                ["""
-let textView = UITextView(frame: CGRect(x: 20.0, y: 90.0, width: 250.0, height: 100.0))
-textView.contentInsetAdjustmentBehavior = .automatic
-textView.center = self.view.center
-textView.textAlignment = NSTextAlignment.justified
-textView.textColor = UIColor.blue
-textView.backgroundColor = UIColor.lightGray
-""",
-                 """
-Text("Add your text")
-"""]
+            ViewController.resultSnippet = snippets.get.textView
+              
         case 5:
-            ViewController.resultSnippet =
-                ["""
-UISwitch
-  override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let switchDemo=UISwitch(frame:CGRect(x: 150, y: 150, width: 0, height: 0))
-        switchDemo.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
-        switchDemo.setOn(true, animated: false)
-        self.view.addSubview(switchDemo)
-        
-    }
-    
-    @objc func switchStateDidChange(_ sender:UISwitch!)
-    {
-        if (sender.isOn == true){
-            //action when switch is on
-        }
-        else{
-            //action when switch is off
-        }
-    }
-""",
-                 """
-Toggle("Optional Message", isOn: $stateBinding)
-                .toggleStyle(SwitchToggleStyle(tint: .green))
-"""]
+            ViewController.resultSnippet = snippets.get.switches
+                
         case 6:
-            ViewController.resultSnippet =
-                ["""
-UIView:
-override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        
-        let myNewView=UIView(frame: CGRect(x: 10, y: 100, width: 300, height: 200))
-        
-        // Change UIView background colour
-        myNewView.backgroundColor=UIColor.lightGray
-        
-        // Add rounded corners to UIView
-        myNewView.layer.cornerRadius=25
-        
-        // Add border to UIView
-        myNewView.layer.borderWidth=2
-        
-        // Change UIView Border Color to Red
-        myNewView.layer.borderColor = UIColor.red.cgColor
-        
-        // Add UIView as a Subview
-        self.view.addSubview(myNewView)
-        
-    }
-""",
-                 """
-UIView is not present in SwiftUI
-"""]
+            ViewController.resultSnippet = snippets.get.views
+             
         case 7:
-            ViewController.resultSnippet =
-                ["""
-UISegment Control:
-override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        
-        let mySegmentedControl = UISegmentedControl (items: ["One","Two","Three"])
-        
-        let xPostion:CGFloat = 10
-        let yPostion:CGFloat = 150
-        let elementWidth:CGFloat = 300
-        let elementHeight:CGFloat = 30
-        
-        mySegmentedControl.frame = CGRect(x: xPostion, y: yPostion, width: elementWidth, height: elementHeight)
-        
-        // Make second segment selected
-        mySegmentedControl.selectedSegmentIndex = 1
-        
-        //Change text color of UISegmentedControl
-        mySegmentedControl.tintColor = UIColor.yellow
-        
-        //Change UISegmentedControl background colour
-        mySegmentedControl.backgroundColor = UIColor.black
-        
-        // Add function to handle Value Changed events
-        mySegmentedControl.addTarget(self, action: #selector(self.segmentedValueChanged(_:)), for: .valueChanged)
-        
-        self.view.addSubview(mySegmentedControl)
-    }
-    
-    @objc func segmentedValueChanged(_ sender:UISegmentedControl!)
-    {
-    //action when values are changed
-    }
-
-""",
-                 """
-struct ContentView: View {
-    @State private var favoriteColor = 0
-
-    var body: some View {
-        VStack {
-            Picker(selection: $favoriteColor, label: Text("What is your favorite color?")) {
-                Text("Red").tag(0)
-                Text("Green").tag(1)
-                Text("Blue").tag(2)
-            }
-            .pickerStyle(SegmentedPickerStyle())
-        }
-    }
-}
-"""]
+            ViewController.resultSnippet = snippets.get.segments
+              
+        case 8:
+            ViewController.resultSnippet = snippets.get.buttonCircle
+        case 9:
+            ViewController.resultSnippet = snippets.get.buttonTriangle
+        case 10:
+            ViewController.resultSnippet = snippets.get.viewCircle
+        case 11:
+            ViewController.resultSnippet = snippets.get.viewTriangle
         default:
             break
         }

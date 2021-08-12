@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		558ACDC226C5B1E900BE6B46 /* CodeSnippets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558ACDC126C5B1E900BE6B46 /* CodeSnippets.swift */; };
 		559A884926C3143B00D3EB73 /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 559A884826C3143A00D3EB73 /* gif.gif */; };
 		559BF7C626C2FB89003DB92C /* ObjectDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559BF7C526C2FB89003DB92C /* ObjectDetectionViewController.swift */; };
 		559BF7CA26C3094C003DB92C /* UIDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 559BF7C926C3094C003DB92C /* UIDetector.mlmodel */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		558ACDC126C5B1E900BE6B46 /* CodeSnippets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnippets.swift; sourceTree = "<group>"; };
 		559A884826C3143A00D3EB73 /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
 		559BF7C526C2FB89003DB92C /* ObjectDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionViewController.swift; sourceTree = SOURCE_ROOT; };
 		559BF7C926C3094C003DB92C /* UIDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UIDetector.mlmodel; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		558ACDC026C5B1DA00BE6B46 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				558ACDC126C5B1E900BE6B46 /* CodeSnippets.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		55C383CA26BE426C00F83650 /* Loafjet */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +227,7 @@
 		91DB992426B2BE3900F8C5D8 /* Swift Co-Pilot */ = {
 			isa = PBXGroup;
 			children = (
+				558ACDC026C5B1DA00BE6B46 /* Data */,
 				559A884826C3143A00D3EB73 /* gif.gif */,
 				55C383CA26BE426C00F83650 /* Loafjet */,
 				55C8C97F26B3C4AE007686A3 /* ML Models */,
@@ -387,6 +398,7 @@
 			files = (
 				55C383C726BD40A100F83650 /* UIAlertModel.swift in Sources */,
 				559BF7CA26C3094C003DB92C /* UIDetector.mlmodel in Sources */,
+				558ACDC226C5B1E900BE6B46 /* CodeSnippets.swift in Sources */,
 				559BF7CC26C31078003DB92C /* SwiftGIF.swift in Sources */,
 				55C8C98526B3C5BB007686A3 /* UIImageModel.swift in Sources */,
 				91CCAAD826C532100078CB61 /* SettingsTab.swift in Sources */,
