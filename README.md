@@ -4,7 +4,7 @@
 [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/MLH-Fellowship/pod-3.1.0-Sketch2Code)
 ![Badge](https://img.shields.io/badge/Xcode-12.0-green)
 ![badge](https://img.shields.io/badge/Swift-5.1-red)
-![Badge](https://img.shields.io/badge/Javascript-ES6-brown)
+![Badge](https://img.shields.io/badge/Python-3.9-brown)
 ![badge](https://img.shields.io/badge/Core-ML-yellow)
 ![Badge](https://img.shields.io/badge/IBM-Annotations-green)
 
