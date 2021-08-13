@@ -93,7 +93,6 @@ extension HistoryTableViewController{
                 }
                 print("WORKING: \(self.titles)")
                 
-                //print(json)
             } catch {
                 print("Error during JSON serialization: \(error)")
             }

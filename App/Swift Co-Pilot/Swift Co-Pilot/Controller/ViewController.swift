@@ -96,7 +96,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         Loaf.LoafWheel(message: "Processing", loafWidth: 280, loafHeight: 110, cornerRadius: 20, bgColor1: .orange, bgColor2: .systemPink, fontStyle: "Avenir Medium", fontSize: 17, fontColor: .black, duration: .greatestFiniteMagnitude, wheelStyle: .medium, blurEffect: .light, loafWheelView: view)
     }
     
-    private func setupVisionTextRecognition(image: UIImage?){
+     func setupVisionTextRecognition(image: UIImage?){
         //indicator.startAnimating()
         var textString = ""
         
