@@ -128,7 +128,11 @@ You need to follow the naming type as given above.
 
 # Sponsor Technology
 
-We used **domain.com** to create and launch server with the codebase we have right now. We used **Cockroach DB** for storing and retrieving some information in real-time, but one can also use any kind of database they wish to like Firebase Realtime database.
+- We used **domain.com** to create and launch server with the codebase we have right now. 
+- **Cockroach DB** was used for storing and retrieving information in real-time.
+ 
+<img width="250" alt="Screenshot 2021-08-13 at 7 20 01 PM" src="https://user-images.githubusercontent.com/56252259/129367211-61c2343c-bfc8-4101-9eec-13b1ae8477e4.png"> <img width="250" alt="Screenshot 2021-08-13 at 3 26 21 PM" src="https://user-images.githubusercontent.com/56252259/129366845-8c506b0b-64fc-4e57-bfbb-025fd3225846.png">
+
 
 # Tech Stacks 🖥
 
