@@ -191,6 +191,7 @@ V.   Release Sketch2Code as a Beta release to know user feedback
 # Warnings ⚠️
 - Right now S2C is not powerful enough to support all the UIElements that come with Xcode but, we are working on a top-down approach of covering the most used UIElements with the best possible accuracy.
 - When we say provide Sketch and Text you do need to follow a few practices with your inputs to use S2C.
+- Right now S2C is limited to Swift language, in future we tend to make it available for other programming languages too.
 - With upcoming versions we focus on making S2C more powerful and more versatile
 
 ## Requirements to Run 🚩
