@@ -186,7 +186,7 @@ V.   Release Sketch2Code as a Beta release to know user feedback
 ## Requirements to Run 🚩
 - Xcode 12+
 - Swift 5+
-- PyCharm
+- For the server backend: Python 3.8.5 (with the requirements.txt installation)
 
 
 ## MLH Pre-Fellowship( Summer 2021)
