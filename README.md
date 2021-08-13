@@ -194,7 +194,7 @@ V.   Release Sketch2Code as a Beta release to know user feedback
 | GitHub Usernames                                      | Domain                     |
 | ----------------------------------------------------- | -------------------------- |
 | [@gokulNair](https://github.com/gokulnair2001)      | iOS App  + Documentation |
-| [@prabaljitWalia](https://github.com/anmolbansal7)        |  iOS App + Documentation |
+| [@prabaljitWalia](https://github.com/prabal4546)        |  iOS App + Documentation |
 | [@Alex](https://github.com/amin-codes) | Backend |
 
 - Feel free to contribute 💪🏼 
