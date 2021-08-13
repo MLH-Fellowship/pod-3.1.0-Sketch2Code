@@ -37,7 +37,9 @@ We also realised that it wasn't convenient for all to draw a Sketch of UI and he
 The Sketch2Code solution uses the following elements:
 
 <p align="center" width="100%">
+ 
 <img width="800" alt="Screenshot 2021-08-12 at 4 12 58 PM" src="https://user-images.githubusercontent.com/56252259/129193965-49ad8078-8976-442d-a3cd-e505724210d8.png"> 
+
 </p>
 
 # How to run ?⚙️
@@ -77,8 +79,12 @@ Rigt now we have two type of Sketch 2 Code conversion:
 
 ### Quick Demo
 
+<p align="center" width="100%">
+ 
 <img width="400" alt="Screenshot 2021-08-12 at 4 12 58 PM" src="https://user-images.githubusercontent.com/56252259/129183908-d19ece27-27f3-41d0-98f5-25aa8ea90350.png">
 
+ </p>
+ 
 Make sure you spell the element type correctly🪄
 
 ### 2. UI Screen Detection
