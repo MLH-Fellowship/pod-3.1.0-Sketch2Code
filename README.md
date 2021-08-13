@@ -117,7 +117,6 @@ You need to follow the naming type as given above.
 <img src = "https://user-images.githubusercontent.com/60341847/129336198-b4d13927-1ba7-4cf2-8411-fdf643b62861.png" width = "20%" height = "20%">
 <img src = "assets/historyCodeDetail_iphone12prographite_portrait.png" width = "20%" height = "20%">
 <img src = "assets/text2code_iphone12prographite_portrait.png" width = "20%" height = "20%">
-<img src = "assets/settings_iphone12prographite_portrait.png" width = "20%" height = "20%">
 
 # Features ⚡️
 - ```Sketch to Code``` provides code snippet for UIElements in Swift & SwiftUI.
