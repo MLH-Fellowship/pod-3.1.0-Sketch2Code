@@ -37,7 +37,9 @@ We also realised that it wasn't convenient for all to draw a Sketch of UI and he
 The Sketch2Code solution uses the following elements:
 
 <p align="center" width="100%">
+ 
 <img width="800" alt="Screenshot 2021-08-12 at 4 12 58 PM" src="https://user-images.githubusercontent.com/56252259/129193965-49ad8078-8976-442d-a3cd-e505724210d8.png"> 
+
 </p>
 
 # How to run ?⚙️
@@ -77,8 +79,12 @@ Rigt now we have two type of Sketch 2 Code conversion:
 
 ### Quick Demo
 
+<p align="center" width="100%">
+ 
 <img width="400" alt="Screenshot 2021-08-12 at 4 12 58 PM" src="https://user-images.githubusercontent.com/56252259/129183908-d19ece27-27f3-41d0-98f5-25aa8ea90350.png">
 
+ </p>
+ 
 Make sure you spell the element type correctly🪄
 
 ### 2. UI Screen Detection
@@ -128,7 +134,11 @@ You need to follow the naming type as given above.
 
 # Sponsor Technology
 
-We used **domain.com** to create and launch server with the codebase we have right now. We used **Cockroach DB** for storing and retrieving some information in real-time, but one can also use any kind of database they wish to like Firebase Realtime database.
+- We used **domain.com** to create and launch server with the codebase we have right now. 
+- **Cockroach DB** was used for storing and retrieving information in real-time.
+ 
+<img width="250" alt="Screenshot 2021-08-13 at 7 20 01 PM" src="https://user-images.githubusercontent.com/56252259/129367211-61c2343c-bfc8-4101-9eec-13b1ae8477e4.png"> <img width="250" alt="Screenshot 2021-08-13 at 3 26 21 PM" src="https://user-images.githubusercontent.com/56252259/129366845-8c506b0b-64fc-4e57-bfbb-025fd3225846.png">
+
 
 # Tech Stacks 🖥
 
@@ -181,6 +191,7 @@ V.   Release Sketch2Code as a Beta release to know user feedback
 # Warnings ⚠️
 - Right now S2C is not powerful enough to support all the UIElements that come with Xcode but, we are working on a top-down approach of covering the most used UIElements with the best possible accuracy.
 - When we say provide Sketch and Text you do need to follow a few practices with your inputs to use S2C.
+- Right now S2C is limited to Swift language, in future we tend to make it available for other programming languages too.
 - With upcoming versions we focus on making S2C more powerful and more versatile
 
 ## Requirements to Run 🚩
