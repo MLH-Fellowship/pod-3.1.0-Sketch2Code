@@ -9,47 +9,54 @@ import UIKit
 import Vision
 import VisionKit
 import CoreML
-import Alamofire
+import ImageIO
+import SwiftUI
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var scanBtn: UIButton!
-    @IBOutlet weak var coPilotBtn: UIButton!
+    @IBOutlet weak var testImage: UIImageView!
+    @IBOutlet weak var bgImage: UIImageView!
+    @IBOutlet weak var clearBtn: UIButton!
     
     private var request = VNRecognizeTextRequest(completionHandler: nil)
     private let buttonDetector = buttonShapeDetector()
-    private var selectedImage = UIImageView()
     private var elementDetected = String()
     static var resultSnippet = [String()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scanBtn.layer.cornerRadius = 14
-        coPilotBtn.layer.cornerRadius = 14
+        scanBtn.layer.cornerRadius = 10
+        testImage.layer.cornerRadius = 25
+        clearBtn.isHidden = true
+        
+        bgImage.loadGif(name: "gif")
+        
+        tabBarController?.tabBar.backgroundImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.layoutIfNeeded()
     }
     
-    @IBAction func testBtn(_ sender: UIButton) {
-        alamoGet()
+    @IBAction func settingsView(_ sender: Any) {
+        let vc = UIHostingController(rootView: SetttingsTab())
+        present(vc, animated: true)
     }
     @IBAction func scanButton(_ sender: Any) {
         showDataInputType()
     }
-    
-    @IBAction func coPilotButton(_ sender: Any) {
-        self.performSegue(withIdentifier: keys.valueOf.mainToTextCodeVC, sender: nil)
+    @IBAction func clearImageButton(_ sender: Any) {
+        testImage.image = UIImage()
     }
-    
     
     func showDataInputType() {
         let alert = UIAlertController(title: "Input mode", message: "Select a input mode", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-            let scannerViewController = VNDocumentCameraViewController()
-            scannerViewController.delegate = self
-            self.present(scannerViewController, animated: true)
+            self.setupImageSelection(type: "camera")
         }))
         
         alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
-            self.setupImageSelection()
+            self.setupImageSelection(type: "gallery")
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -58,27 +65,38 @@ class ViewController: UIViewController {
     }
 }
 
+//MARK:- Image Picker Methods
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func setupImageSelection(){
+    func setupImageSelection(type: String){
         
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+        if type == "gallery" {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.allowsEditing = true
             imagePicker.sourceType = .photoLibrary
             self.present(imagePicker, animated: true)
+        }else if type == "camera" {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true
+            imagePicker.sourceType = .camera
+            self.present(imagePicker, animated: true)
+        }else {
+            print("cancel")
         }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        selectedImage.image = image!
+        testImage.image = image
         setupVisionTextRecognition(image: image)
+        clearBtn.isHidden = false
         
+        Loaf.LoafWheel(message: "Processing", loafWidth: 280, loafHeight: 110, cornerRadius: 20, bgColor1: .orange, bgColor2: .systemPink, fontStyle: "Avenir Medium", fontSize: 17, fontColor: .black, duration: .greatestFiniteMagnitude, wheelStyle: .medium, blurEffect: .light, loafWheelView: view)
     }
     
-    private func setupVisionTextRecognition(image: UIImage?){
+     func setupVisionTextRecognition(image: UIImage?){
         //indicator.startAnimating()
         var textString = ""
         
@@ -165,6 +183,7 @@ extension ViewController {
             codeSnippet(snippetNo: 7)
             return
         default:
+            Loaf.dismissWheel(loafWheelView: view)
             print("error")
             return
         }
@@ -175,8 +194,8 @@ extension ViewController {
         
         var inputImage = [buttonShapeDetectorInput]()
         
-        if let image = selectedImage.image{
-            let newImage =  buffer(from: selectedImage.image!)
+        if let image = testImage.image{
+            let newImage =  buffer(from: testImage.image!)
             let imageForClassification = buttonShapeDetectorInput(image: newImage!)
             inputImage.append(imageForClassification)
         }
@@ -198,6 +217,7 @@ extension ViewController {
                     print("ml model detected triangle")
                 }
                 else {
+                    Loaf.dismissWheel(loafWheelView: view)
                     // Provide default code for identified UIElement
                     print("ml model detected nil")
                 }
@@ -217,10 +237,10 @@ extension ViewController {
                 codeSnippet(snippetNo: 1)
             }
             else if shape == keys.valueOf.circle{
-                // code snippet with button of circular shape
+                codeSnippet(snippetNo: 8)
             }
             else if shape == keys.valueOf.triangle {
-                // code snippet with button of triangular shape
+                codeSnippet(snippetNo: 9)
             }
             return
         case "view":
@@ -228,11 +248,10 @@ extension ViewController {
                 codeSnippet(snippetNo: 6)
             }
             else if shape == keys.valueOf.circle {
-                
-                // code snippet with view of circular shape
+                codeSnippet(snippetNo: 10)
             }
             else if shape == keys.valueOf.triangle {
-                // code snippet with button of triangular shape
+               codeSnippet(snippetNo: 11)
             }
             return
         default:
@@ -245,105 +264,40 @@ extension ViewController {
     func codeSnippet(snippetNo: Int) {
         switch snippetNo {
         case 1:
-            ViewController.resultSnippet =
-                [ """
-            let button = UIButton()
-            button.frame = CGRect(x: view.center.x, y: view.center.y, width: 100, height: 100)
-            button.setTitle("", for: .normal)
-            button.layer.cornerRadius = 0
-            button.layer.borderWidth = 0
-            button.layer.borderColor = UIColor.clear.cgColor
-""",
-                  """
-                              Button(action:{
-                                  //do something when button is tapped
-                              }){
-                                  Text("Title")
-                              }.padding()
-                              .foregroundColor(.blue)
-                              .background(Rectangle().fill(Color.white))
-                             //adjust width, height or alignment
-                              .frame(width: 100, height: 100)
-  """]
+            ViewController.resultSnippet = snippets.get.buttons
+               
         case 2:
-            ViewController.resultSnippet =
-                [ """
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-            label.center = CGPoint(x: 160, y: 285)
-            label.textAlignment = .center
-            label.text = "I'm a test label"
-            self.view.addSubview(label)
-""",
-                  """
-              Label("SwiftUI Label", systemImage: "book.fill")
-                .labelStyle(TitleOnlyLabelStyle())
-  """]
+            ViewController.resultSnippet = snippets.get.labels
+               
         case 3:
-            ViewController.resultSnippet =
-                [ """
-            UITextField
-""",
-                  """
-              struct ContentView: View {
-                  @State var username: String = ""
-                  
-                  var body: some View {
-                      VStack(alignment: .leading) {
-                          TextField("Enter username...", text: $username)
-                      }.padding()
-                  }
-              }
-  """]
+            ViewController.resultSnippet = snippets.get.textField
+               
         case 4:
-            ViewController.resultSnippet =
-                ["""
-UITextView
-""",
-                 """
-SwiftUI code for UItextView
-"""]
+            ViewController.resultSnippet = snippets.get.textView
+              
         case 5:
-            ViewController.resultSnippet =
-                ["""
-UISwitch
-""",
-                 """
-SwiftUI code for UISwitch
-"""]
+            ViewController.resultSnippet = snippets.get.switches
+                
         case 6:
-            ViewController.resultSnippet =
-                ["""
-UIView
-""",
-                 """
-UIView is not present in SwiftUI
-"""]
+            ViewController.resultSnippet = snippets.get.views
+             
         case 7:
-            ViewController.resultSnippet =
-                ["""
-UISegment Control
-""",
-                 """
-SwiftUI code for UISegment Control
-"""]
+            ViewController.resultSnippet = snippets.get.segments
+              
+        case 8:
+            ViewController.resultSnippet = snippets.get.buttonCircle
+        case 9:
+            ViewController.resultSnippet = snippets.get.buttonTriangle
+        case 10:
+            ViewController.resultSnippet = snippets.get.viewCircle
+        case 11:
+            ViewController.resultSnippet = snippets.get.viewTriangle
         default:
             break
         }
         
         self.performSegue(withIdentifier: keys.valueOf.scanToResultVC, sender: nil)
+        Loaf.dismissWheel(loafWheelView: view)
     }
-    //MARK:-GET
-    func alamoGet(){
-        let request = AF.request("http://sketch2code.tech/history")
-            // 2
-        request.responseJSON { (data) in
-            print(data)
-            }
-        //use this when ip address is added to API 
-//        request.responseDecodable(of: Result.self) { (response) in
-//          guard let results = response.value else { return }
-//          print(results.code)
-//        }
-    }
-
+    
 }

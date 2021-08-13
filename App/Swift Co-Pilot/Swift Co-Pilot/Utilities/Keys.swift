@@ -15,6 +15,8 @@ class keys {
     let mainToTextCodeVC = "mainToTextCode"
     let textToResultVC = "textToResult"
     let abbreviationVC = "abbreviationVC"
+    let ruleBookVC = "ruleBookVC"
+    let ObjectDetToResultVC = "ObjectDetToResultVC"
     
     //MARK:- Shape names
     let square = "squares"
@@ -23,4 +25,5 @@ class keys {
     
     //MARK:- cell ID
     let rulesCellID = "rulesCellID"
+    let historyCell = "cell"
 }

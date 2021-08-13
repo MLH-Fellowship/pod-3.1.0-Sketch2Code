@@ -1,2 +1,10 @@
 Flask
 gunicorn
+Flask-Migrate
+Flask-Cors
+Flask-Script
+Flask-SQLAlchemy
+SQLAlchemy
+sqlalchemy-cockroachdb
+psycopg2
+firebase-admin
