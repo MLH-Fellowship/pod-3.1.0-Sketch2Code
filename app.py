@@ -41,8 +41,6 @@ def history():
     elif request.method == 'POST':
         title = request.get_json().get('title', '')
         code = request.get_json().get('code', '')
-        #session["ip"].append({'title': title, 'code': code})
-        #userHistory["ip"].append({'title': title, 'code': code})
         db.reference()
         db.reference('/ip').push({'title': title, 'code': code})
         sz = len(db.reference("/ip").get())
