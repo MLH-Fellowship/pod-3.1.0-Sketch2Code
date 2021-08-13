@@ -58,9 +58,9 @@ In total we have 2 types of code generators:
 ## Sketch 2 Code✏️
 Rigt now we have two type of Sketch 2 Code conversion:
 
-### 1. Single Elelemnt Detecion
+### 1. Single Element Detecion
 
-- In this we have concentrated on single UIElelement detection. There are times when developers need code of a specific type of UIElement.
+- In this we have concentrated on single UIElement detection. There are times when developers need code of a specific type of UIElement.
 - So in such cases users can go on with using the Single Element Detection.
 
 #### Rules
@@ -119,6 +119,9 @@ You need to follow the naming type as given above.
 - ```Sketch to Code``` provides code snippet for UIElements in Swift & SwiftUI.
 - ```Text to Code``` generates code snippet based on text provided.
 - ```Save Snippet``` used to save code snippet.
+
+#Sponsor Technology
+We used domain.com to create and launch server with the codebase we have right now. We used Cockroach DB for storing and retrieving some information in real-time, but one can also use any kind of database they wish to like Firebase Realtime database.
 
 # Tech Stacks 🖥
 
