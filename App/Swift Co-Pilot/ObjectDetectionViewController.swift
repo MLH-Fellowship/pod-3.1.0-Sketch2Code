@@ -10,6 +10,7 @@ import CoreML
 import Vision
 import VisionKit
 import ImageIO
+import SwiftUI
 
 class ObjectDetectionViewController: UIViewController {
     
@@ -40,6 +41,10 @@ class ObjectDetectionViewController: UIViewController {
         showDataInputType()
     }
     
+    @IBAction func settingsButton(_ sender: Any) {
+        let vc = UIHostingController(rootView: SetttingsTab())
+        present(vc, animated: true)
+    }
     @IBAction func showCodeButton(_ sender: Any) {
         
         if isAddImageMode {
@@ -202,27 +207,24 @@ extension ObjectDetectionViewController {
         for i in 0..<totalElements {
             switch elements[i] {
             case "Buttons":
-                swiftCodes.append("UIButton")
-                swiftUICode.append("SwiftUI Buttons")
+                swiftCodes.append(snippets.get.buttons[0])
+                swiftUICode.append(snippets.get.buttons[1])
             case "Image":
-                swiftCodes.append("UIImage")
-                swiftUICode.append("SwiftUI Image")
+                swiftCodes.append(snippets.get.image[0])
+                swiftUICode.append(snippets.get.image[1])
             case "TF":
-                swiftCodes.append("UITextField")
-                swiftUICode.append("SwiftUI TextField")
+                swiftCodes.append(snippets.get.textField[0])
+                swiftUICode.append(snippets.get.textField[1])
             default:
                 errorAlert(mesg: "No elements found")
             }
         }
-        
-        print(swiftCodes)
-        print(swiftUICode)
-        
+       
         ViewController.resultSnippet.removeAll()
         
         
-        finalSwiftCode = self.swiftCodes.joined(separator: "\n")
-        swiftUIFinalCode = self.swiftUICode.joined(separator: "\n")
+        finalSwiftCode = self.swiftCodes.joined(separator: "\n\n")
+        swiftUIFinalCode = self.swiftUICode.joined(separator: "\n\n")
         
         ViewController.resultSnippet.append(finalSwiftCode)
         ViewController.resultSnippet.append(swiftUIFinalCode)
